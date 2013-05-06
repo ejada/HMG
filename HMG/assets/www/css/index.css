@@ -1,4 +1,4 @@
-
+//test
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
@@ -20,7 +20,7 @@ body {
     );
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:20pt;
+    font-size:15px;
     height:100%;
     margin:0px;
     padding:0px;
@@ -87,20 +87,18 @@ input.ui-input-text.custom-text-input{
 	margin:0;
 	font-family:Helvetica;
     font-weight: bold;
-    font-size:20pt;
+    font-size:15px;
     color : black;
     text-shadow	:none;
-	height: 3em;
 }
+
 
 .homePageLogo{
 	width	:100%;
-	height : 3em;
 }
 
 .loginLogoDiv{
-	margin-top:10%; 
-	
+	margin-top:10px; 
 }
 
 
@@ -121,12 +119,12 @@ input.ui-input-text.custom-text-input{
 	border-radius:0em;
 	border: none;
 	background-color:transparent;
-	padding-left:50px;
+	padding-left:30px;
 	box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
 	margin:0;
 	font-family:Helvetica;
     font-weight: bold;
-    font-size:20pt;
+    font-size:15px;
     color : black;
     text-shadow	:none;
 }
@@ -151,12 +149,13 @@ input.ui-input-text.custom-text-input{
 
 
 
+
 .textbox-hint-img{
 	position:absolute;
-	top:1.2em; 
-	left:20px;
-	width:36px;
-	height:32px;
+	top:7px; 
+	left:10px;
+	width:18px;
+	height:16px;
 }
 
 
@@ -188,7 +187,7 @@ div[data-theme="custom-button-1"] span .ui-btn-text  {
 	
 	data-shadow:false;
 	border: none; 
-	font-size:20pt;
+	font-size:15px;
 	color: #ffffff;
 	font-weight: bold;
 	text-shadow: none;
@@ -208,12 +207,13 @@ div[data-theme="custom-button-1"]  {
 	background-repeat: no-repeat; 
 	
 	box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
+	
+	height	: 37px
 }
 
 
 div[data-theme="custom-button-1"] .ui-btn-inner{
-	padding-top	: 2.5em;
-	height	: 5em;
+	padding-top	: 0.6em;
 }
 
 
@@ -236,7 +236,7 @@ div[data-theme="custom-button-3"] span .ui-btn-text  {
 	border: none; 
 	color: #ffffff;
 	font-weight: bold;
-	font-size: 20pt;
+	font-size: 15px;
 	text-shadow: none;
 	box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
 	background-image: none;
@@ -254,13 +254,12 @@ div[data-theme="custom-button-3"]  {
 	background-repeat: no-repeat; 
 	
 	box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
-	
+	height	: 37px
 }
 
 
 div[data-theme="custom-button-3"] .ui-btn-inner{
-	padding-top	: 2.5em;
-	height	: 5em;
+	padding-top	: 0.6em;
 }
 
 
@@ -289,35 +288,33 @@ div[data-theme="custom-button-3"] .ui-btn-inner{
 	border-radius:0em 0em 0em 0em ;
 	color: rgb(255, 255, 255);
 	text-shadow	:none;
-	height	: 3em;
+	height	: 42px;
 }
 
 
  body .ui-header .ui-title {
-	margin: 1em;
+ 
  }
 
 .ui-header .ui-title{
 	font-family:Helvetica;
-	font-size: 20pt;
+	font-size: 20px;
 	font-weight	:bold;
 	white-space: normal;
-	margin-top	:1em;
+	margin-top	:9px;
 }
 .ui-header .ui-title { margin-right:20px; margin-left:20px; }
 
 .pannelText{
-	font-size: 20pt; 
+	font-size: 20px; 
 	color:gray;
 	text-shadow:none;
 	font-weight:normel;
 }
 
-.pannelText.ui-link-inherit{margin: 1em;}
-.ui-icon.ui-icon-arrow-r.ui-icon-shadow{margin-top:.4em;}
-.ui-li-count.ui-btn-up-c.ui-btn-corner-all{font-size:15pt;}
-.ui-btn-left.ui-btn,
-.ui-btn-right.ui-btn{margin:1em .4em;}
+.pannelText.ui-link-inherit{}
+.ui-icon.ui-icon-arrow-r.ui-icon-shadow{}
+.ui-li-count.ui-btn-up-c.ui-btn-corner-all{}
 
 
 
@@ -350,17 +347,9 @@ a[data-theme="custom-button"] {
     /*font-family:Helvetica;
     font-weight: bold;*/
     font-family:Trebuchet MS;
+    top: 5px;
     text-decoration: none;
     text-shadow: 0 -1px 0 rgba(0,0,0, 0.4);
-	 border: none;
-    background-color:none ; 
-    background-size:100% 100%; 
-	background-repeat: no-repeat; 
-	border-radius:0em;
-	width:55px;
-	height:30px;
-    padding:0px;
-    padding-right: 5px !important;
     }
 /* make room for the point */
 a[data-theme="custom-button"].ui-btn-right {
@@ -387,57 +376,58 @@ a[data-theme="custom-button"] span .ui-btn-text  {
 	background-image: url(../img/custom-btn-active.png);
 }
 
+
 .appoListSplitter {bottom: 0;}
 .appoTitle{
-	font-size: 20pt;
+	font-size: 20px;
 	text-align : left;
 	font-weight: bold;
-	margin: 10px 5px;
+	margin: 5px 3px;
 }
 
 .appoDrName{
-	font-size: 15pt;
+	font-size: 15px;
 	text-align : left;
 	color: gray;
-	margin: 10px 5px;
+	margin: 5px 3px;
 }
 
 .appoDetails{
-	font-size: 12pt;
+	font-size: 12px;
 	text-align : left;
 	color: gray;
 	font-weight: bold;
-	margin: 10px 5px;
+	margin: 5px 3px;
 }
 .app-cal-img{
 	float:left;
-	width: 30px;
-	height: 40px;
+	width: 15px;
+	height: 20px;
 }
 
 .app-bill-img{
 	float:right;
-	width: 50px;
-	height: 50px;
-	margin:10px;
+	width: 30px;
+	height: 30px;
+	margin:5px;
 }
 
 .appo-dr-img{
-	width: 100px;
-	height: 100px;
+	width: 50px;
+	height: 50px;
 	float:left;
 }
 
 .drProfDetails{
-	font-size: 15pt;
+	font-size: 15px;
 	text-align : left;
 	color: gray;
 	margin: 5px;
 }
 
 .drProfName{
-	font-size: 20pt;
+	font-size: 20px;
 	text-align : left;
 	font-weight: bold;
-	margin: 10px 5px;
+	margin: 5px 3px;
 }

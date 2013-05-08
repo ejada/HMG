@@ -48,7 +48,16 @@ App.OpenMapPage	=	function (){
 		}
 
 $(document).bind("mobileinit",function(){
-	console.log("ksn");
+	console.log("mobileinit");
+	
+	if(App.LANG == "en"){
+		Loc = enLoc;
+		Loc.Dir = "ltr";
+	}else{
+		Loc = arLoc;
+		Loc.Dir = "rtl";
+	}
+	
 	LoginController.init();
 	MapController.init();
 });

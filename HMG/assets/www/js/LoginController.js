@@ -1,169 +1,47 @@
 var LoginController =  LoginController || {};
 
-//Note: this var must be global to be used within simpledialog2 plugin
-var userNameTxSel 	= "#userNameInput";
-var passwordTxSel 	= "#userPasswordInput";
-
 LoginController = (function(){
 	
 	var loginPageSel	= "#login-page";
+	
+	
 	var loginBtSel		= '#loginBtn';
-	var registerBtSel	= "#registerBtn";
-	var forgetLnkSel	= "#forgetLnk";
-	var dontHaveAccountLB  ="#dontHaveAccountLB";
-	
-	
-	var reLoginFlag 	= false;
-	var logoutFlag 		= false;
-	var reLoginMsg		= "";
+	var userID			= '#userIDInput';
+	var userMobile 		= '#userMobileInput';
 	
 	function init(){
 		
 		
 		
-		$(loginPageSel).on("pageinit", function() {
-			$(loginBtSel).button('disable');
-			$('input[type=text]').attr('autocomplete','off');
-			$('input[type=text]').attr("autocorrect", "off");
+		$(loginPageSel).on("pagebeforeshow", function() {
+			localizeLoginPage();
+			//$(loginBtSel).disableButton();
+
 			
 		});		
 		
 		
-		
-		
-		
-        
-		$(userNameTxSel).on("keypress" , function(evt) {
-			
-			var val = this.value;
-		    evt = evt || window.event;
-		    
-		    var charCode = typeof evt.which == "number" ? evt.which : evt.keyCode;
-		    
-		    if (charCode && charCode > 32) {
-		        var keyChar = String.fromCharCode(charCode);
-
-		        // Transform typed character
-		        var mappedChar = /[\u0660-\u0669]/.test(keyChar) ? String.fromCharCode(charCode - 1584) : keyChar;
-
-		        var start, end;
-		        if (typeof this.selectionStart == "number" && typeof this.selectionEnd == "number") {
-		            // Non-IE browsers and IE 9
-		            start = this.selectionStart;
-		            end = this.selectionEnd;
-		            this.value = val.slice(0, start) + mappedChar + val.slice(end);
-
-		            // Move the caret
-		            this.selectionStart = this.selectionEnd = start + 1;
-		        }
-		        this.value = this.value.replace(/['\s]/gi, '');
-		        
-		        return false;
-		    }  
-		        
-		        
-		});
-        
-        $(userNameTxSel).on("keyup" , function() {
-        	
-        
-		});
-        
-		$(userNameTxSel).on("blur" , function() {
-		    var username =$(userNameTxSel).val();
-		    var password =$(passwordTxSel).val();
-	        if(username && username.length>0){
-	        	if(password && password.length>0){
-	            	$(loginBtSel).button('enable');
-	            }else{
-	            	$(loginBtSel).button('disable');
-	            	$(passwordTxSel).focus();
-	            }
-	        }else{
-	        	$(loginBtSel).button('disable');
-	        }
-		});
-
-		$(passwordTxSel).on("keyup" , function() {
-			this.value = this.value.replace(/['\s]/gi, '');
-			
-		});
-		
-		$(passwordTxSel).on("blur" , function() {
-		    var password =$(passwordTxSel).val();
-		    var username =$(userNameTxSel).val();
-		    
-		    $(loginBtSel).button('disable');
-		    
-		    if(password && password.length>0 ){
-		    	if( username && username.length>0){
-		        	$(loginBtSel).button('enable');
-		        }else{
-		        	$(loginBtSel).button('disable');
-		        	$(userNameTxSel).focus();
-		        }
-		    }
-
-		});
-
 	} // init()
 	
 
 	function localizeLoginPage(){
 		
-		$("#loginHeader").text(Loc.loginPage.login)
-		$(dontHaveAccountLB).text(Loc.loginPage.dontHaveAccountLB);
+		$("#loginHeader").text(Loc.loginPage.header)
 		
-		$(registerBtSel).changeButtonText(Loc.loginPage.registerBtn);
-		$(loginBtSel).changeButtonText(Loc.loginPage.loginBtn);
-		
-		$(forgetLnkSel).changeButtonText(Loc.loginPage.forgetLnk);
-		$("#canntRemUserPasLB").text(Loc.loginPage.forgetLB);
+		$("#idTitle").text(Loc.loginPage.id);
+		$("#mobileTitle").text(Loc.loginPage.mobile);
 		
 		$(loginPageSel).attr("dir",Loc.Dir);
 		
-		$(userNameTxSel).attr("placeholder",Loc.loginPage.userIdLB);
-		$(userNameTxSel).attr("value","");
-		$("#userNameInputRow").removeClass('costum-input-row-error');
-		$("#userImg").attr("src","images/user.png");
+		//$(userID).attr("placeholder",Loc.loginPage.userIdLB);
+		$(userID).attr("value","");
 		
-		$(passwordTxSel).attr("placeholder",Loc.loginPage.passwordLB);
-		$(passwordTxSel).attr("value","");
-		$("#passwordInputRow").removeClass('costum-input-row-error');
-		$("#passwordImg").attr("src","images/password.png");
-		
-		
-		$("#footerTabLogin").text(Loc.tabBar.login);
-		$("#footerTabBranches").text(Loc.tabBar.branches);
-		$("#footerTabCurrency").text(Loc.tabBar.currency);
-		$("#footerTabLanguage").text(Loc.tabBar.language);
+		//$(userMobile).attr("placeholder",Loc.loginPage.passwordLB);
+		$(userMobile).attr("value","");
 		
 	}
 	
-	function dynamicAuthSuccess(response){
-				
-		App.setLogedUser(true);
-		if (App.TABLET)
-    	{
-        	$("#loginViewMenu").hide();
-        	$("#optionsViewMenu").show();
-    	}
-		
-		if (App.TABLET){
-			App.changePage("#accounts-page", "flip");
-		}else{
-			App.changePage("#homeScreen-page", "flip");
-		}
-			
-			
-	}
 	
-	function dynamicAuthError(response){
-		
-		reLogin(response.msg.msgText);
-		
-//		App.showErrorDialog(response.msg.msgText);
-	}
 	
 	function loginSuccess(responce){
 		$(loginBtSel).button('disable');
@@ -178,13 +56,13 @@ LoginController = (function(){
 		if((response.status && response.status == -1) || (response.msg && response.msg.msgCode && response.msg.msgCode != "E001126")){
 			App.showErrorDialog(response.msg.msgText);
 		}else{
-			$(userNameTxSel).attr("placeholder",Loc.loginPage.userIdEr);
-			$(userNameTxSel).attr("value","");
+			$(userID).attr("placeholder",Loc.loginPage.userIdEr);
+			$(userID).attr("value","");
 			$("#userNameInputRow").addClass('costum-input-row-error');
 			$("#userImg").attr("src","images/user_error.png");
 			
-			$(passwordTxSel).attr("placeholder",Loc.loginPage.passwordEr);
-			$(passwordTxSel).attr("value","");
+			$(userMobile).attr("placeholder",Loc.loginPage.passwordEr);
+			$(userMobile).attr("value","");
 			$("#passwordInputRow").addClass('costum-input-row-error');
 			$("#passwordImg").attr("src","images/password_error.png");
 			
@@ -196,52 +74,69 @@ LoginController = (function(){
 	//login function
 	function login(){
 		
-		$.mobile.changePage("#home");
-		
+		console.log("Login");
 		//validate user name and password
- 		var userName = $(userNameTxSel).val();
-		var userPassword = $(passwordTxSel).val();
+ 		var userName = $(userID).val();
+		var userPassword = $(userMobile).val();
 		
-	    
+		/*
+		sendMessage.PatientMobileNumber = this.txtMobileNo.Text;
+                sendMessage.PatientIdentificationID = this.txtIqamaID.Text;
+                sendMessage.Channel = PatienInQueryDataRef.Channel.Kiosk;
+                sendMessage.ScreenName = this.ToString();
+                sendMessage.Time = DateTime.Now.ToShortTimeString();
+                sendMessage.LanguageID = (PatienInQueryDataRef.LanguageList)(SP.CurrentLanguageID);
+                sendMessage.PatientTypeID = 1;
+                sendMessage.PatientStatus = 2;
+              
+                sendMessage.ProjectID = Convert.ToInt16(SP.PojectID);
+                sendMessage.ServiceName = (PatienInQueryDataRef.ServicesListNames)(SP.currentServiceName);
+				*/
+				
+		$.support.cors = true;
+		$.mobile.allowCrossDomainPages = true;
+		var x = { sendMessage:{PatientMobileNumber:"0500828299",PatientIdentificationID:"1066116672",Channel:"mobile",LanguageID:"en",PatientTypeID:1,PatientStatus:2,			ProjectID:12,ServiceName:"PatientInQueryData"}};
+		
+	    var jqxhr = $.ajax({
+		  type: 'POST',
+		  contentType: 'application/json',
+		  dataType: 'json',
+		  timeout: 120000,
+		  processData: false,
+		  url: "http://10.10.94.26:8080/PatientInQueryData/Service1.svc",
+		  data:  $.toJSON(x),
+		  async:true
+		})
+	    .success(function(data) { 
+	    	
+//	    	if(App.dev == true){
+//	    		alert("success: "+$.toJSON( data));
+//	    	}
+	    	console.log("\n\rsuccess:"+$.toJSON( data));
+	    	
+	    	
+	    })
+	    .error(function(result) { 
+	    	console.log("error: "+$.toJSON( result))
+    		
+	    })
+	    .complete(function() { 
+	    	console.log("complete");
+	    });
 		
 		//validate username and password from Server 
 		//var result = DataContext.authUser(userName, userPassword,loginSuccess,loginError); 
 	}// login()
 	
 	
-	function reLogin(msg){
-		
-		App.setLogedUser(false);
-		
-		reLoginFlag 	= true;
-		reLoginMsg		= msg;
-		
-		//$.mobile.changePage(loginPageSel);
-		App.changePage(loginPageSel);
-	}
-	
-	
-	function logout(msg){
-		App.setLogedUser(false);
-		
-		logoutFlag 	= true;
-		reLoginFlag 	= false;
-		reLoginMsg		= msg;
-		
-		//$.mobile.changePage(loginPageSel);
-		App.changePage(loginPageSel);
-	}
-	
-	
-	function testAR(){
-		App.startAR();
-	}
 	
 	return {
 		init:init,
 		login:login,
-		testAR:testAR,
-		reLogin:reLogin,
-		logout:logout
+		
 	}
 })();
+
+
+
+

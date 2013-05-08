@@ -94,11 +94,15 @@ input.ui-input-text.custom-text-input{
 
 
 .homePageLogo{
-	width	:100%;
+	width	:80%;
+	max-width: 314px;
+	margin: 20px auto;
 }
 
 .loginLogoDiv{
-	margin-top:10px; 
+	background-color: white;
+	text-align : center;
+	border-bottom: 3px solid gray;
 }
 
 
@@ -115,6 +119,7 @@ input.ui-input-text.custom-text-input{
 	border-top-width : 0;
 }
 
+/*
 .ui-input-text.ui-shadow-inset.ui-corner-all.ui-btn-shadow.ui-body-c{
 	border-radius:0em;
 	border: none;
@@ -129,7 +134,7 @@ input.ui-input-text.custom-text-input{
     text-shadow	:none;
 }
 
-
+*/
 
 
 .ui-li-static.ui-li{
@@ -158,6 +163,16 @@ input.ui-input-text.custom-text-input{
 	height:16px;
 }
 
+/***************** Custom Input ******************************/
+.ui-input-text.ui-shadow-inset.ui-corner-all.ui-btn-shadow.ui-body-c{
+	border-radius:.3em;
+	
+}
+
+label.ui-input-text{
+	color :gray;
+	font-weight : bold;
+}
 
 /***************** Custom hr ******************************/
 hr.splitter {
@@ -303,7 +318,80 @@ div[data-theme="custom-button-3"] .ui-btn-inner{
 	white-space: normal;
 	margin-top	:9px;
 }
-.ui-header .ui-title { margin-right:20px; margin-left:20px; }
+.ui-header .ui-title { margin-right:50px; margin-left:50px; }
+
+
+.navbar_separator{
+	height: 70%;
+	width : 3px;
+	margin : 6px 2px auto 50px;
+	float : left;
+}
+
+/***************** Menu Button **********************************/
+a[data-theme="menu-button"].ui-btn-left.ui-btn.ui-shadow.ui-btn-corner-all {
+	border: none;
+    background-color:none ; 
+    background-size:100% 100%; 
+	background-repeat: no-repeat; 
+	border-radius:0em;
+	width:30px;
+	height:25px;
+    padding:0px;
+	top : 8px;
+	left : 10px;
+}	
+
+
+a[data-theme="menu-button"] .ui-btn-inner {
+	border: 0px;
+}
+
+a[data-theme="menu-button"].ui-shadow{
+    box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
+}
+
+
+.ui-btn-up-menu-button{
+	background-image: url(../img/menu_btn.png);
+}
+
+.ui-btn-down-menu-button,.ui-btn-hover-menu-button,.ui-btn-active-menu-button,.aBtnSelector-menu-button{
+	background-image: url(../img/custom-btn-active.png);
+}
+/*****************  **********************************/
+
+/***************** Next Button **********************************/
+a[data-theme="next-button"].ui-btn-right.ui-btn.ui-shadow.ui-btn-corner-all {
+	border: none;
+    background-color:none ; 
+    background-size:100% 100%; 
+	background-repeat: no-repeat; 
+	border-radius:0em;
+	width:50px;
+	height:30px;
+    padding:0px;
+	top : 6px;
+}	
+
+
+a[data-theme="next-button"] .ui-btn-inner {
+	border: 0px;
+}
+
+a[data-theme="next-button"].ui-shadow{
+    box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
+}
+
+
+.ui-btn-up-next-button{
+	background-image: url(../img/next_btn.png);
+}
+
+.ui-btn-down-next-button,.ui-btn-hover-next-button,.ui-btn-active-next-button,.aBtnSelector-next-button{
+	background-image: url(../img/custom-btn-active.png);
+}
+/*****************  **********************************/
 
 .pannelText{
 	font-size: 20px; 
@@ -322,7 +410,7 @@ a[data-theme="custom-button"] {
     border: none;
     }
     
-a[data-theme="custom-button"] .ui-btn-corner-all {
+a[data-theme="custom-button"] .ui-shadow {
     border: none;
     background-color:none ; 
     background-size:100% 100%; 

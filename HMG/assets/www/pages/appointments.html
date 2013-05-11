@@ -1,0 +1,229 @@
+<!--************************** Home Screen *******************************--> 
+		<div data-role="page" id="home" data-title="LogIn" class="custom-content">
+			
+			<div data-role="panel" id="left-panel" data-position="left" data-display="push">
+				<ul data-role="listview" >
+					<li data-icon="delete" style="height:5em;background-color:#528EBF">
+						<table dir="ltr" cellspacing="0" style="width: 100%; padding-top: 1em;" ><tbody><tr>
+							<td width ="20%"><img class="homePageLogo" src="img/user_logo.png" /></td>
+							<td width ="80%"><h1 class="pannelText"  style="margin: 10px; color:white;text-shadow:none;font-weight:normel">Welcome Mr. Amr</h1></td>
+						</tr></tbody></table>
+					</li>
+					<li>
+						<a  class="pannelText"  href="#home" onclick=""  data-iconpos="notext">My Appointments</a>
+						<div class="ui-li-count">3</div>
+					</li>
+					<li>
+						<a class="pannelText"  href="#" onclick=""  data-iconpos="notext">News</a>
+					</li>
+					
+					<li>
+						<a class="pannelText"  href="#" onclick=""  data-iconpos="notext">Services</a>
+					</li>
+					
+					<li>
+						<a class="pannelText" href="#staff" onclick=""  data-iconpos="notext">Our Staff</a>
+					</li>
+					
+					<li >
+						<a class="pannelText" href="#" onclick="App.OpenMapPage();"  data-iconpos="notext">Locations</a>
+					</li>
+					
+					<li>
+						<a class="pannelText"  href="#" onclick=""  data-iconpos="notext">About</a>
+					</li>
+					
+				</ul>
+			</div><!-- /panel -->
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a data-theme="custom-button" href="#left-panel"  >Menu</a>
+				<h1> My Appointments </h1>
+				<a data-theme="custom-button" href="#popupPanel"  data-rel="popup" data-position-to="window">Add</a>
+			</div>
+			
+			<div data-role="content" id="appo-content" >
+				<ul data-role="listview"  data-theme="appoList">
+					<li data-icon="delete" style="" onclick="$.mobile.changePage('#appoDetails');" >
+						<div style="border:1px solid #528EBF;background-color:white;margin-right:10px;">
+							<table dir="ltr" cellspacing="3px" style="width: 100%;" ><tbody>
+								<tr >
+									<td style="" colspan="3">
+									<img class="app-bill-img"  src="img/bill.png">
+										<div>
+											<div class="appoTitle">Examination Title</div>
+											<div class="appoDrName">Dr. Name is here</div>
+											
+										</div>
+										
+										
+										<hr class='splitter loginFormSplitter'>
+									</td>
+
+								</tr>
+								
+								<tr>
+									<td style="">
+										<img class="app-cal-img"  src="img/cal.png">
+										<div class="appoDetails">15/6/2013</div>
+									</td>
+									<td style="">
+										<img class="app-cal-img"  src="img/clock.png">
+										<div class="appoDetails">02:00 AM</div>
+									</td>
+									<td style="">
+										<img class="app-cal-img"  src="img/pin.png">
+										<div class="appoDetails">Hospital</div>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						
+					</li>
+					<li data-icon="delete" style="" onclick="$.mobile.changePage('#appoDetails');" >
+						<div style="border:1px solid #528EBF;background-color:white;margin-right:10px;">
+							<table dir="ltr" cellspacing="3px" style="width: 100%;" ><tbody>
+								<tr >
+									<td style="" colspan="3">
+									<img class="app-bill-img"  src="img/bill.png">
+										<div>
+											<div class="appoTitle">Examination Title</div>
+											<div class="appoDrName">Dr. Name is here</div>
+											
+										</div>
+										
+										
+										<hr class='splitter loginFormSplitter'>
+									</td>
+
+								</tr>
+								
+								<tr>
+									<td style="">
+										<img class="app-cal-img"  src="img/cal.png">
+										<div class="appoDetails">15/6/2013</div>
+									</td>
+									<td style="">
+										<img class="app-cal-img"  src="img/clock.png">
+										<div class="appoDetails">02:00 AM</div>
+									</td>
+									<td style="">
+										<img class="app-cal-img"  src="img/pin.png">
+										<div class="appoDetails">Hospital</div>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						
+					</li>
+					<li data-icon="delete" style="" onclick="$.mobile.changePage('#appoDetails');" >
+						<div style="border:1px solid #528EBF;background-color:white;margin-right:10px;">
+							<table dir="ltr" cellspacing="3px" style="width: 100%;" ><tbody>
+								<tr >
+									<td style="" colspan="3">
+									<img class="app-bill-img"  src="img/bill.png">
+										<div>
+											<div class="appoTitle">Examination Title</div>
+											<div class="appoDrName">Dr. Name is here</div>
+											
+										</div>
+										
+										
+										<hr class='splitter loginFormSplitter'>
+									</td>
+
+								</tr>
+								
+								<tr>
+									<td style="">
+										<img class="app-cal-img"  src="img/cal.png">
+										<div class="appoDetails">15/6/2013</div>
+									</td>
+									<td style="">
+										<img class="app-cal-img"  src="img/clock.png">
+										<div class="appoDetails">02:00 AM</div>
+									</td>
+									<td style="">
+										<img class="app-cal-img"  src="img/pin.png">
+										<div class="appoDetails">Hospital</div>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						
+					</li>
+					
+				</ul>
+			</div>
+			
+		</div><!-- Home-page -->
+		
+		
+		
+		<!--************************** Appointment Details Screen *******************************--> 
+		<div data-role="page" id="appoDetails" data-title="LogIn" class="custom-content">
+			
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a href="#" data-rel="back"  >Back</a> 
+				<h1> Dr Profile </h1>
+			</div>
+			
+			<div data-role="content" id="staff-content" >
+				<ul data-role="listview"  data-theme="appoList">
+					<li data-icon="delete" style="">
+						<div style="border:1px solid #528EBF;background-color:white;margin-right:10px;">
+							<table dir="ltr" cellspacing="3px" style="width: 100%;" ><tbody>
+								<tr >
+									<td style="" colspan="3">
+									<img class="app-bill-img"  src="img/bill.png">
+										<div>
+											<div class="appoTitle">Examination Title</div>
+											<div class="appoDrName">Dr. Name is here</div>
+											
+										</div>
+										
+										
+										<hr class='splitter loginFormSplitter'>
+									</td>
+
+								</tr>
+								
+								<tr>
+									<td style="">
+										<img class="app-cal-img"  src="img/cal.png">
+										<div class="appoDetails">15/6/2013</div>
+									</td>
+									<td style="">
+										<img class="app-cal-img"  src="img/clock.png">
+										<div class="appoDetails">02:00 AM</div>
+									</td>
+									<td style="">
+										<img class="app-cal-img"  src="img/pin.png">
+										<div class="appoDetails">Hospital</div>
+									</td>
+								</tr>
+							</tbody></table>
+							<div style="margin:10px;  " >
+								<img style="border: 4px solid gray; width: 655px; height: 750px;" src="http://maps.googleapis.com/maps/api/staticmap?center=24.706767,46.675417&zoom=17&size=655x750&maptype=roadmap
+&markers=color:blue%7Clabel:H%7C24.706767,46.675417&sensor=false" />
+							</div>
+						</div>
+						
+					</li>
+					
+				</ul>
+			</div>
+			
+			<div data-role="footer" data-theme="d" data-position="fixed" data-tap-toggle="false" class="custom-tabbar-1" dir="ltr">
+					<div style="margin:10px;">
+						<table width="100%"><tbody><tr>
+							<td width="50%" style="margin:10px;"><input data-theme="custom-button-1" id="registerBtn" type="button" data-mini="true" onclick=''  value="Cancel" ></input></td>
+							<td  width="50%" style="margin:10px;"><input data-theme="custom-button-3" id="registerBtn" type="button" data-mini="true" onclick=''  value="Reschedule" ></input></td>
+						</tr></tbody></table>
+						
+					</div>
+				</div>
+			
+		</div><!-- drProfile-page -->
+        

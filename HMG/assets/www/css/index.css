@@ -1,4 +1,13 @@
-//test
+/* 
+	****************************	Colors	************************************
+	
+	#528EBF		82	142	191				GRAY - Nav Bottons Separator
+	#366E99		54	110	153				BLUE - Nav Bottons
+	#44769E		68	118	158				BLUE - Nav Bottons
+
+ */
+
+
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
@@ -103,6 +112,8 @@ input.ui-input-text.custom-text-input{
 	background-color: white;
 	text-align : center;
 	border-bottom: 3px solid gray;
+	margin : -15px;
+	margin-bottom : 15px;
 }
 
 
@@ -241,7 +252,6 @@ div[data-theme="custom-button-1"] .ui-btn-inner{
 	background-image: url(../img/button-active.png);
 }
 
-
 /***************** custom-button-3 **********************************/
 
 
@@ -285,6 +295,62 @@ div[data-theme="custom-button-3"] .ui-btn-inner{
 /* Active State */
 .ui-btn-down-custom-button-3,.ui-btn-active-custom-button-3,.aBtnSelector,.aBtnSelector-custom-button-3{
 	background-image: url(../img/button3-active.png);
+}
+
+
+.ui-listview.ui-listview-inset.ui-corner-all.ui-shadow{
+	margin-top : 20px;
+	margin-bottom: 20px;
+}
+
+
+
+
+/***************** pannel-button **********************************/
+
+
+div[data-theme="pannel-button"] span .ui-btn-text  {
+	
+	data-shadow:false;
+	border: none; 
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 15px;
+	text-shadow: none;
+	box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
+	background-image: none;
+	background-color:none ;
+	
+}
+
+div[data-theme="pannel-button"]  {
+	border-radius:0em;
+	border: none; 
+	data-corners:false;
+	data-shadow:false;
+	background-size:100% 100%; 
+	background-repeat: no-repeat; 
+	
+	box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
+	height	: 100%;
+	
+	margin: 0;
+}
+
+
+div[data-theme="pannel-button"] .ui-btn-inner{
+	padding-top	: 1.2em;
+	padding-bottom : 1em;
+}
+
+
+.ui-btn-up-pannel-button, .ui-btn-hover-pannel-button{
+	background-color:#528EBF ;
+}
+
+/* Active State */
+.ui-btn-down-pannel-button,.ui-btn-active-pannel-button,.aBtnSelector,.aBtnSelector-pannel-button{
+	background-color:#366E99 ;
 }
 
 
@@ -391,16 +457,122 @@ a[data-theme="next-button"].ui-shadow{
 .ui-btn-down-next-button,.ui-btn-hover-next-button,.ui-btn-active-next-button,.aBtnSelector-next-button{
 	background-image: url(../img/custom-btn-active.png);
 }
-/*****************  **********************************/
+/***************** Nav Pannel  **********************************/
 
-.pannelText{
+.ui-li-has-icon .ui-btn-inner a.pannelText.ui-link-inherit{
 	font-size: 20px; 
 	color:gray;
 	text-shadow:none;
-	font-weight:normel;
+	font-weight:normal;
+	padding-left : 50px;
 }
 
+.ui-panel-position-left{
+
+	-webkit-box-shadow	: inset -15px 0 5px -9px rgba(0,0,0,.15);
+	-moz-box-shadow		: inset -15px 0 5px -9px rgba(0,0,0,.15);
+	box-shadow			: inset -15px 0 5px -9px rgba(0,0,0,.15);
+	
+	background-image : linear-gradient(#ffffff,#f0f0f0);
+	background-image : -o-linear-gradient(#ffffff,#f0f0f0);
+	background-image : -ms-linear-gradient(#ffffff,#f0f0f0);
+	background-image : -moz-linear-gradient(#ffffff,#f0f0f0);
+	background-image : -webkit-linear-gradient(#ffffff,#f0f0f0);
+	background-image : -webkit-gradient(linear,left top,left bottom,from(#ffffff),to(#f0f0f0));
+}
+
+.ui-panel-inner .ui-listview > .ui-li.ui-first-child{
+	background-color : #528EBF;
+	background-image : none;
+	height	: 100px;
+	padding : 0;
+}
+
+.ui-panel-inner .ui-listview > .ui-btn-up-c{
+	-webkit-box-shadow	: inset -15px 0 5px -9px rgba(0,0,0,.15);
+	-moz-box-shadow		: inset -15px 0 5px -9px rgba(0,0,0,.15);
+	box-shadow			: inset -15px 0 5px -9px rgba(0,0,0,.15);
+	
+	background-image : linear-gradient(#ffffff,#f0f0f0);
+	background-image : -o-linear-gradient(#ffffff,#f0f0f0);
+	background-image : -ms-linear-gradient(#ffffff,#f0f0f0);
+	background-image : -moz-linear-gradient(#ffffff,#f0f0f0);
+	background-image : -webkit-linear-gradient(#ffffff,#f0f0f0);
+	background-image : -webkit-gradient(linear,left top,left bottom,from(#ffffff),to(#f0f0f0));
+}
+
+.ui-panel-inner .ui-listview > .ui-li{
+	border-top-width : 0;
+}
+
+.pannelUserTab{
+	border-bottom : 2px solid #44769E;
+}
+
+.pannelVerifyTab{
+	border-bottom : 2px solid #44769E;
+	border-right : 1px solid #44769E;
+}
+.ui-icon.ui-icon-verify-icon.ui-icon-shadow{
+	background-color : transparent;
+	border-radius : 0;
+	border-width : 0;
+	-webkit-box-shadow	: none;
+	-moz-box-shadow		: none;
+	box-shadow			: none;
+	background-image : url(../img/verify_icon.png);
+	background-size : 100%;
+	width : 20px;
+	height : 20px;
+	left : 10px;
+}
+
+.pannelRegTab{
+	border-bottom : 2px solid #44769E;
+	border-left : 1px solid #44769E;
+}
+.ui-icon.ui-icon-register-icon.ui-icon-shadow{
+	background-color : transparent;
+	border-radius : 0;
+	border-width : 0;
+	-webkit-box-shadow	: none;
+	-moz-box-shadow		: none;
+	box-shadow			: none;
+	background-image : url(../img/changeuser_icon.png);
+	background-size : 100%;
+	width : 20px;
+	height : 20px;
+	left : 10px;
+}
+
+.ui-icon.ui-icon-loggedin-icon.ui-icon-shadow{
+	background-color : transparent;
+	border-radius : 0;
+	border-width : 0;
+	-webkit-box-shadow	: none;
+	-moz-box-shadow		: none;
+	box-shadow			: none;
+	background-image : url(../img/loggedin_icon.png);
+	background-size : 100%;
+	width : 40px;
+	height : 40px;
+	left : 10px;
+	top : 30%;
+}
+
+#pannelUserBtn{
+	border: none;
+}
+
+.ui-li-icon.nav-thumb.ui-li-thumb{
+	max-height : 25px;
+	max-width	: 25px;
+}
+
+
 .pannelText.ui-link-inherit{}
+
+/***************** Nav Pannel  **********************************/
 .ui-icon.ui-icon-arrow-r.ui-icon-shadow{}
 .ui-li-count.ui-btn-up-c.ui-btn-corner-all{}
 

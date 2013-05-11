@@ -1,0 +1,93 @@
+<!--************************** Login Screen *******************************--> 
+		<div data-role="page" id="login-page" data-title="LogIn" class="custom-content">
+			
+			
+			<div data-role="panel" id="left-panel" data-position="left" data-display="reveal">
+				<ul data-role="listview" >
+					<li data-icon="false" >
+						<table dir="ltr" border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+							<tr style="height: 50%;">
+								<td colspan=2 class="pannelUserTab">
+									<input data-theme="pannel-button" id="pannelUserBtn" style="border:none;" type="button" data-mini="true" onclick='' data-icon='loggedin-icon'  value="UserName not logged in" ></input>
+								</td>
+							</tr>
+							<tr>
+								<td width ="50%" class="pannelVerifyTab">
+									<input data-theme="pannel-button" id="" type="button" data-mini="true" onclick='' data-icon='verify-icon' value="Verify" ></input>
+								</td>
+								<td width ="50%" class="pannelRegTab">
+									<input data-theme="pannel-button" id="" type="button" data-mini="true" onclick='' data-icon='register-icon' value="Change User" ></input>
+								</td>
+							</tr>
+						</tbody></table>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#" onclick=""  >
+							<img src="img/news_icon.png" class="ui-li-icon nav-thumb" />
+							News
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText" href="#staff" onclick=""  data-iconpos="notext">
+							<img src="img/doctors_icon.png" class="ui-li-icon nav-thumb" />
+							My Doctors
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText" href="#" onclick="App.OpenMapPage();">
+							<img src="img/places_icon.png" class="ui-li-icon nav-thumb" />
+							Locations
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#" onclick="">
+							<img src="img/careers_icon.png" class="ui-li-icon nav-thumb" />
+							Careers
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#" onclick=""  >
+							<img src="img/about_icon.png" class="ui-li-icon nav-thumb" />
+							About
+						</a>
+					</li>
+					
+				</ul>
+			</div><!-- /panel -->
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a data-theme="menu-button" href="#left-panel"  ></a>
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1 id="loginHeader"> Login </h1>
+				<a data-theme="next-button" href="#" id='loginBtn' onclick="LoginController.login();"></a>
+			</div>
+			
+			
+			<div data-role="content" id="login-content" >
+				
+				<div class='loginLogoDiv' >
+					<img class="homePageLogo" src="img/logo.png" />
+				</div>
+					
+				<div  id="container">
+					
+					<label id='idTitle' for="userIDInput">ID number</label>
+					<input id="userIDInput" type="text" name="name" id="name" value=""  />
+					
+					<label id='mobileTitle' for="userMobileInput">Mobile number</label>
+					<input id="userMobileInput" type="text" name="name" id="name" value=""  />
+					
+					
+					 
+				</div> <!-- container  -->
+				
+				
+							
+			</div><!-- content -->
+		   
+		</div><!-- login-page -->

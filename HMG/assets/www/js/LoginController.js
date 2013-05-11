@@ -95,7 +95,7 @@ LoginController = (function(){
 				
 		$.support.cors = true;
 		$.mobile.allowCrossDomainPages = true;
-		var x = { sendMessage:{PatientMobileNumber:"0500828299",PatientIdentificationID:"1066116672",Channel:"mobile",LanguageID:"en",PatientTypeID:1,PatientStatus:2,			ProjectID:12,ServiceName:"PatientInQueryData"}};
+		var x = { sendMessage:{PatientMobileNumber:"0500828299",PatientIdentificationID:"1066116672",Channel:2,LanguageID:2,PatientTypeID:1,PatientStatus:2,			ProjectID:12,ServiceName:"PatientInQueryData"}};
 		
 	    var jqxhr = $.ajax({
 		  type: 'POST',

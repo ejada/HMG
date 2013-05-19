@@ -2,69 +2,15 @@
 		<div data-role="page" id="login-page" data-title="LogIn" class="custom-content">
 			
 			
-			<div data-role="panel" id="left-panel" data-position="left" data-display="reveal">
-				<ul data-role="listview" >
-					<li data-icon="false" >
-						<table dir="ltr" border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
-							<tr style="height: 50%;">
-								<td colspan=2 class="pannelUserTab">
-									<input data-theme="pannel-button" id="pannelUserBtn" style="border:none;" type="button" data-mini="true" onclick='' data-icon='loggedin-icon'  value="UserName not logged in" ></input>
-								</td>
-							</tr>
-							<tr>
-								<td width ="50%" class="pannelVerifyTab">
-									<input data-theme="pannel-button" id="" type="button" data-mini="true" onclick='' data-icon='verify-icon' value="Verify" ></input>
-								</td>
-								<td width ="50%" class="pannelRegTab">
-									<input data-theme="pannel-button" id="" type="button" data-mini="true" onclick='' data-icon='register-icon' value="Change User" ></input>
-								</td>
-							</tr>
-						</tbody></table>
-					</li>
-					
-					<li  data-icon="false">
-						<a class="pannelText"  href="#" onclick=""  >
-							<img src="img/news_icon.png" class="ui-li-icon nav-thumb" />
-							News
-						</a>
-					</li>
-					
-					<li  data-icon="false">
-						<a class="pannelText" href="#staff" onclick=""  data-iconpos="notext">
-							<img src="img/doctors_icon.png" class="ui-li-icon nav-thumb" />
-							My Doctors
-						</a>
-					</li>
-					
-					<li  data-icon="false">
-						<a class="pannelText" href="#" onclick="App.OpenMapPage();">
-							<img src="img/places_icon.png" class="ui-li-icon nav-thumb" />
-							Locations
-						</a>
-					</li>
-					
-					<li  data-icon="false">
-						<a class="pannelText"  href="#" onclick="">
-							<img src="img/careers_icon.png" class="ui-li-icon nav-thumb" />
-							Careers
-						</a>
-					</li>
-					
-					<li  data-icon="false">
-						<a class="pannelText"  href="#" onclick=""  >
-							<img src="img/about_icon.png" class="ui-li-icon nav-thumb" />
-							About
-						</a>
-					</li>
-					
-				</ul>
-			</div><!-- /panel -->
+			
+			<pyinclude src="pages/navPannel.html">
+			
 			
 			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
-				<a data-theme="menu-button" href="#left-panel"  ></a>
+				<a data-theme="menu-button" href="#left-panel" class="ui-btn-left" ></a>
 				<img class="navbar_separator" src="img/navbar_separator.png" />
-				<h1 id="loginHeader"> Login </h1>
-				<a data-theme="next-button" href="#" id='loginBtn' onclick="LoginController.login();"></a>
+				<h1 id="loginHeader"> <pyloc src="loginPage.header"> </h1>
+				<a data-theme="next-button" href="#" id='' class="ui-btn-right" onclick="LoginController.login();"></a>
 			</div>
 			
 			
@@ -76,11 +22,11 @@
 					
 				<div  id="container">
 					
-					<label id='idTitle' for="userIDInput">ID number</label>
-					<input id="userIDInput" type="text" name="name" id="name" value=""  />
+					<label id='idTitle' for="userIDInput"><pyloc src="loginPage.id"></label>
+					<input id="userIDInput" type="text" id="name" value="" data-clear-btn="true" dir="ltr"/>
 					
-					<label id='mobileTitle' for="userMobileInput">Mobile number</label>
-					<input id="userMobileInput" type="text" name="name" id="name" value=""  />
+					<label id='mobileTitle' for="userMobileInput"><pyloc src="loginPage.mobile"></label>
+					<input id="userMobileInput" type="number" pattern="[0-9]*" name="name" id="name" value="" dir="ltr" />
 					
 					
 					 
@@ -88,6 +34,83 @@
 				
 				
 							
+			</div><!-- content -->
+		   
+		</div><!-- login-page -->
+		
+		
+		
+<!--************************** Register Screen *******************************--> 
+		<div data-role="page" id="reg-page" data-title="LogIn" class="custom-content" >
+			
+			
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a  data-rel="back" href="#" class="ui-btn-left"  ></a>
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1 id="regHeader"><pyloc src="regPage.header"></h1>
+				<a data-theme="next-button" href="#" id='regBtn' class="ui-btn-right" onclick=""></a>
+			</div>
+			
+			
+			<div data-role="content" id="reg-content" >
+				
+				<div class='loginLogoDiv' >
+					<img class="homePageLogo" src="img/logo.png" />
+				</div>
+					
+				<div  id="container">
+					
+					<label for="selectIDType" id="selectIDTypeLB"><pyloc src="regPage.header"></label>
+					<select name="selectIDType" id="selectIDType" data-icon='select-icon'>
+						<option value="0"></option>
+					</select>
+	
+					<label id='idLB' for="idVal"><pyloc src="regPage.idNum"></label>
+					<input id="idVal" type="text" name="name" id="name" value=""  />
+					
+					<label id='userFirstNameLB' for="userFirstNameVal"><pyloc src="regPage.name1"></label>
+					<input id="userFirstNameVal" type="text" name="name" id="name" value=""  />
+					
+					<label id='userLastNameLB' for="userLastNameVal"><pyloc src="regPage.name3"></label>
+					<input id="userLastNameVal" type="text" name="name" id="name" value=""  />
+					
+					<label id='userMobileLB' for="userMobileVal"><pyloc src="regPage.mobileNo"></label>
+					<input id="userMobileVal" type="text" name="name" id="name" value=""  />
+					
+					
+					 
+				</div> <!-- container  -->
+				
+				
+							
+			</div><!-- content -->
+		   
+		</div><!-- login-page -->
+		
+		
+		
+<!--************************** Validation Screen *******************************--> 
+		<div data-role="page" id="validate-page" data-title="" class="custom-content" >
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a  data-rel="back" href="#" class="ui-btn-left"  ></a>
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1 id="validationHeader"><pyloc src="validatePage.header"></h1>
+				<a data-theme="done-button" href="#" class="ui-btn-right" id='validateBtn' onclick=""></a>
+			</div>
+			
+			
+			<div data-role="content" id="reg-content" >
+				
+				<div class="validationHint"><pyloc src="validatePage.msg"></div>
+				
+				<div style="position: relative">
+					
+					<input id="userMobileInput" class="validate-input" type="number" pattern="[0-9]*" id="name" value="" dir="ltr" />
+					<img src="img/appo_icon.png" class="validation-img"/>
+				</div>
+				
 			</div><!-- content -->
 		   
 		</div><!-- login-page -->

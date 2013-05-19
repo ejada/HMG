@@ -1,9 +1,9 @@
 /* 
 	****************************	Colors	************************************
 	
-	#528EBF		82	142	191				GRAY - Nav Bottons Separator
-	#366E99		54	110	153				BLUE - Nav Bottons
-	#44769E		68	118	158				BLUE - Nav Bottons
+	#ED1B2C		82	142	191				GRAY - Nav Bottons Separator
+	#366E99		54	110	153				BLUE - Nav Bottons Active
+	#404545		68	118	158				BLUE - Nav Bottons 
 
  */
 
@@ -86,22 +86,6 @@ h1 {
 
 /***************** Login ******************************/
 
-
-input.ui-input-text.custom-text-input{
-	border-radius:0em;
-	border: none;
-	background-color:transparent;
-	padding-left:30px;
-	box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
-	margin:0;
-	font-family:Helvetica;
-    font-weight: bold;
-    font-size:15px;
-    color : black;
-    text-shadow	:none;
-}
-
-
 .homePageLogo{
 	width	:80%;
 	max-width: 314px;
@@ -116,73 +100,15 @@ input.ui-input-text.custom-text-input{
 	margin-bottom : 15px;
 }
 
-
-[class~="costum-input-row"] {
-	background:#EAE6E2;
+.validationHint{
+	color : gray;
+	font-size: 20px;
+	margin : 20px;
 	
 }
 
-[class~="costum-input-row-error"] {
-	background:rgb(232,202,202);
-}
-
-#passwordInputRow{
-	border-top-width : 0;
-}
-
-/*
-.ui-input-text.ui-shadow-inset.ui-corner-all.ui-btn-shadow.ui-body-c{
-	border-radius:0em;
-	border: none;
-	background-color:transparent;
-	padding-left:30px;
-	box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
-	margin:0;
-	font-family:Helvetica;
-    font-weight: bold;
-    font-size:15px;
-    color : black;
-    text-shadow	:none;
-}
-
-*/
-
-
-.ui-li-static.ui-li{
-	padding-right:5px;
-}
-
-.costum-input-row{
-	background-size:100% 100%; 
-	background-repeat: no-repeat; 
-}
-
-.costum-input-row.ui-li-static.ui-li {
-    padding-top:0px;
-    padding-bottom:0px;
-    border-radius	:0;
-}
-
-
-
-
-.textbox-hint-img{
-	position:absolute;
-	top:7px; 
-	left:10px;
-	width:18px;
-	height:16px;
-}
-
-/***************** Custom Input ******************************/
-.ui-input-text.ui-shadow-inset.ui-corner-all.ui-btn-shadow.ui-body-c{
-	border-radius:.3em;
-	
-}
-
-label.ui-input-text{
-	color :gray;
-	font-weight : bold;
+.fist1{
+	height : 100%;
 }
 
 /***************** Custom hr ******************************/
@@ -204,105 +130,6 @@ hr.splitter.loginFormSplitter{
 
 .ui-listview > hr.splitter.loginFormSplitter{
 }
-
-
-/***************** custom-button-1 **********************************/
-
-
-div[data-theme="custom-button-1"] span .ui-btn-text  {
-	
-	data-shadow:false;
-	border: none; 
-	font-size:15px;
-	color: #ffffff;
-	font-weight: bold;
-	text-shadow: none;
-	box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
-	background-image: none;
-	background-color:none ;
-	
-}
-
-div[data-theme="custom-button-1"]  {
-	border-radius:0em;
-	border: none; 
-	background-color:transparent ;
-	data-corners:false;
-	data-shadow:false;
-	background-size:100% 100%; 
-	background-repeat: no-repeat; 
-	
-	box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
-	
-	height	: 37px
-}
-
-
-div[data-theme="custom-button-1"] .ui-btn-inner{
-	padding-top	: 0.6em;
-}
-
-
-.ui-btn-up-custom-button-1, .ui-btn-hover-custom-button-1{
-	background-image: url(../img/button.png);
-}
-
-/* Active State */
-.ui-btn-down-custom-button-1,.ui-btn-active-custom-button-1,.aBtnSelector,.aBtnSelector-custom-button-1{
-	background-image: url(../img/button-active.png);
-}
-
-/***************** custom-button-3 **********************************/
-
-
-div[data-theme="custom-button-3"] span .ui-btn-text  {
-	
-	data-shadow:false;
-	border: none; 
-	color: #ffffff;
-	font-weight: bold;
-	font-size: 15px;
-	text-shadow: none;
-	box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
-	background-image: none;
-	background-color:none ;
-	
-}
-
-div[data-theme="custom-button-3"]  {
-	border-radius:0em;
-	border: none; 
-	background-color:transparent ;
-	data-corners:false;
-	data-shadow:false;
-	background-size:100% 100%; 
-	background-repeat: no-repeat; 
-	
-	box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
-	height	: 37px
-}
-
-
-div[data-theme="custom-button-3"] .ui-btn-inner{
-	padding-top	: 0.6em;
-}
-
-
-.ui-btn-up-custom-button-3, .ui-btn-hover-custom-button-3{
-	background-image: url(../img/button3.png);
-}
-
-/* Active State */
-.ui-btn-down-custom-button-3,.ui-btn-active-custom-button-3,.aBtnSelector,.aBtnSelector-custom-button-3{
-	background-image: url(../img/button3-active.png);
-}
-
-
-.ui-listview.ui-listview-inset.ui-corner-all.ui-shadow{
-	margin-top : 20px;
-	margin-bottom: 20px;
-}
-
 
 
 
@@ -345,7 +172,7 @@ div[data-theme="pannel-button"] .ui-btn-inner{
 
 
 .ui-btn-up-pannel-button, .ui-btn-hover-pannel-button{
-	background-color:#528EBF ;
+	background-color:#404545 ;
 }
 
 /* Active State */
@@ -360,103 +187,8 @@ div[data-theme="pannel-button"] .ui-btn-inner{
 }
 
 
-/***************** Navigation Bar **********************************/
-.custom-navbar-1 {
-	background-color:none ; 
-	background-size:100% 100%; 
-	background-repeat:repeat; 
-	background-image: url(../img/nav_background.png);
-	border-radius:0em 0em 0em 0em ;
-	color: rgb(255, 255, 255);
-	text-shadow	:none;
-	height	: 42px;
-}
 
 
- body .ui-header .ui-title {
- 
- }
-
-.ui-header .ui-title{
-	font-family:Helvetica;
-	font-size: 20px;
-	font-weight	:bold;
-	white-space: normal;
-	margin-top	:9px;
-}
-.ui-header .ui-title { margin-right:50px; margin-left:50px; }
-
-
-.navbar_separator{
-	height: 70%;
-	width : 3px;
-	margin : 6px 2px auto 50px;
-	float : left;
-}
-
-/***************** Menu Button **********************************/
-a[data-theme="menu-button"].ui-btn-left.ui-btn.ui-shadow.ui-btn-corner-all {
-	border: none;
-    background-color:none ; 
-    background-size:100% 100%; 
-	background-repeat: no-repeat; 
-	border-radius:0em;
-	width:30px;
-	height:25px;
-    padding:0px;
-	top : 8px;
-	left : 10px;
-}	
-
-
-a[data-theme="menu-button"] .ui-btn-inner {
-	border: 0px;
-}
-
-a[data-theme="menu-button"].ui-shadow{
-    box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
-}
-
-
-.ui-btn-up-menu-button{
-	background-image: url(../img/menu_btn.png);
-}
-
-.ui-btn-down-menu-button,.ui-btn-hover-menu-button,.ui-btn-active-menu-button,.aBtnSelector-menu-button{
-	background-image: url(../img/custom-btn-active.png);
-}
-/*****************  **********************************/
-
-/***************** Next Button **********************************/
-a[data-theme="next-button"].ui-btn-right.ui-btn.ui-shadow.ui-btn-corner-all {
-	border: none;
-    background-color:none ; 
-    background-size:100% 100%; 
-	background-repeat: no-repeat; 
-	border-radius:0em;
-	width:50px;
-	height:30px;
-    padding:0px;
-	top : 6px;
-}	
-
-
-a[data-theme="next-button"] .ui-btn-inner {
-	border: 0px;
-}
-
-a[data-theme="next-button"].ui-shadow{
-    box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
-}
-
-
-.ui-btn-up-next-button{
-	background-image: url(../img/next_btn.png);
-}
-
-.ui-btn-down-next-button,.ui-btn-hover-next-button,.ui-btn-active-next-button,.aBtnSelector-next-button{
-	background-image: url(../img/custom-btn-active.png);
-}
 /***************** Nav Pannel  **********************************/
 
 .ui-li-has-icon .ui-btn-inner a.pannelText.ui-link-inherit{
@@ -482,7 +214,7 @@ a[data-theme="next-button"].ui-shadow{
 }
 
 .ui-panel-inner .ui-listview > .ui-li.ui-first-child{
-	background-color : #528EBF;
+	background-color : #404545;
 	background-image : none;
 	height	: 100px;
 	padding : 0;
@@ -506,12 +238,12 @@ a[data-theme="next-button"].ui-shadow{
 }
 
 .pannelUserTab{
-	border-bottom : 2px solid #44769E;
+	border-bottom : 2px solid #ED1B2C;
 }
 
 .pannelVerifyTab{
-	border-bottom : 2px solid #44769E;
-	border-right : 1px solid #44769E;
+	border-bottom : 2px solid #ED1B2C;
+	border-right : 1px solid #ED1B2C;
 }
 .ui-icon.ui-icon-verify-icon.ui-icon-shadow{
 	background-color : transparent;
@@ -528,8 +260,8 @@ a[data-theme="next-button"].ui-shadow{
 }
 
 .pannelRegTab{
-	border-bottom : 2px solid #44769E;
-	border-left : 1px solid #44769E;
+	border-bottom : 2px solid #ED1B2C;
+	border-left : 1px solid #ED1B2C;
 }
 .ui-icon.ui-icon-register-icon.ui-icon-shadow{
 	background-color : transparent;
@@ -560,6 +292,21 @@ a[data-theme="next-button"].ui-shadow{
 	top : 30%;
 }
 
+.ui-icon.ui-icon-anonymous-icon.ui-icon-shadow{
+	background-color : transparent;
+	border-radius : 0;
+	border-width : 0;
+	-webkit-box-shadow	: none;
+	-moz-box-shadow		: none;
+	box-shadow			: none;
+	background-image : url(../img/anonymous_icon.png);
+	background-size : 100%;
+	width : 40px;
+	height : 40px;
+	left : 10px;
+	top : 30%;
+}
+
 #pannelUserBtn{
 	border: none;
 }
@@ -572,69 +319,36 @@ a[data-theme="next-button"].ui-shadow{
 
 .pannelText.ui-link-inherit{}
 
-/***************** Nav Pannel  **********************************/
+.loggedUserIcon {
+	
+}
+
+.welcomeMsg{
+	color:white;
+	text-shadow:none;
+	font-weight:normel;
+}
+
+.signout{
+	color:white;
+	text-shadow:none;
+	font-weight:normel;
+	margin-top : 10px;
+}
+
+.signout.ui-link{
+	color:white;
+	text-shadow:none;
+	font-weight:normel;
+	margin-top : 10px;
+	font-size : 12px;
+}
+
+/*****************   **********************************/
 .ui-icon.ui-icon-arrow-r.ui-icon-shadow{}
 .ui-li-count.ui-btn-up-c.ui-btn-corner-all{}
 
 
-
-a[data-theme="custom-button"] {
-    border: none;
-    }
-    
-a[data-theme="custom-button"] .ui-shadow {
-    border: none;
-    background-color:none ; 
-    background-size:100% 100%; 
-	background-repeat: no-repeat; 
-	border-radius:0em;
-	width:55px;
-	height:30px;
-    padding:0px;
-    padding-right: 5px !important;
-}
-
-a[data-theme="custom-button"] .ui-btn-corner-all {
-	background-image: url(../img/custom-btn.png);
-}
-
-/* shadows and label color */
-a[data-theme="custom-button"].ui-shadow,
-a[data-theme="custom-button"] {
-    box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
-    background-clip: none; -webkit-background-clip: none; -moz-background-clip: none;
-    color: rgb(255, 255, 255);
-    /*font-family:Helvetica;
-    font-weight: bold;*/
-    font-family:Trebuchet MS;
-    top: 5px;
-    text-decoration: none;
-    text-shadow: 0 -1px 0 rgba(0,0,0, 0.4);
-    }
-/* make room for the point */
-a[data-theme="custom-button"].ui-btn-right {
-	right: 7px;
-}
-	
-a[data-theme="custom-button"].ui-btn-right .ui-btn-corner-all {
-       /*  padding-right: 5px !important; */
-        padding-left: 5px !important;
-}
-		
-a[data-theme="custom-button"] span .ui-btn-text  {
-	 top:20%; 
-	 font-size:10pt;
-	 text-align: center;
-}
-
-
-.ui-btn-up-custom-button{
-	background-image: url(../img/custom-btn.png);
-}
-
-.ui-btn-down-custom-button,.ui-btn-hover-custom-button,.ui-btn-active-custom-button,.aBtnSelector-custom-button{
-	background-image: url(../img/custom-btn-active.png);
-}
 
 
 .appoListSplitter {bottom: 0;}

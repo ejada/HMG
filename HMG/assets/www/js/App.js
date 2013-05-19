@@ -32,8 +32,17 @@ var App = {
 };
 
 App.initialize();
-App.LANG = "en";
+App.LANG = "ar";
+App.isUserLogged = true;
 var mapAPIisLoaded = false;
+
+App.setFirstTimeUser = function (){
+	$("#pannelUserBtn").hide();
+	$("#pannelGuestBtn").show();
+	console.log("3");
+}
+
+
 
 App.OpenMapPage	=	function (){
 			
@@ -50,6 +59,7 @@ App.OpenMapPage	=	function (){
 $(document).bind("mobileinit",function(){
 	console.log("mobileinit");
 	
+ 
 	if(App.LANG == "en"){
 		Loc = enLoc;
 		Loc.Dir = "ltr";
@@ -57,8 +67,19 @@ $(document).bind("mobileinit",function(){
 		Loc = arLoc;
 		Loc.Dir = "rtl";
 	}
+	//$.mobile.autoInitializePage = false;
+	if(App.isUserLogged == true ){
+		document.location.hash = "#login-page";
+		console.log("1");
+	}else{
+		document.location.hash = "#news-page";
+			console.log("2");
+	}
+	
+	//$.mobile.initializePage();
 	
 	LoginController.init();
+	RegController.init();
 	MapController.init();
 });
 

@@ -1,52 +1,20 @@
 <!--************************** Home Screen *******************************--> 
-		<div data-role="page" id="home" data-title="LogIn" class="custom-content">
+		<div data-role="page" id="appo-page" data-title="LogIn" class="custom-content">
 			
-			<div data-role="panel" id="left-panel" data-position="left" data-display="push">
-				<ul data-role="listview" >
-					<li data-icon="delete" style="height:5em;background-color:#528EBF">
-						<table dir="ltr" cellspacing="0" style="width: 100%; padding-top: 1em;" ><tbody><tr>
-							<td width ="20%"><img class="homePageLogo" src="img/user_logo.png" /></td>
-							<td width ="80%"><h1 class="pannelText"  style="margin: 10px; color:white;text-shadow:none;font-weight:normel">Welcome Mr. Amr</h1></td>
-						</tr></tbody></table>
-					</li>
-					<li>
-						<a  class="pannelText"  href="#home" onclick=""  data-iconpos="notext">My Appointments</a>
-						<div class="ui-li-count">3</div>
-					</li>
-					<li>
-						<a class="pannelText"  href="#" onclick=""  data-iconpos="notext">News</a>
-					</li>
-					
-					<li>
-						<a class="pannelText"  href="#" onclick=""  data-iconpos="notext">Services</a>
-					</li>
-					
-					<li>
-						<a class="pannelText" href="#staff" onclick=""  data-iconpos="notext">Our Staff</a>
-					</li>
-					
-					<li >
-						<a class="pannelText" href="#" onclick="App.OpenMapPage();"  data-iconpos="notext">Locations</a>
-					</li>
-					
-					<li>
-						<a class="pannelText"  href="#" onclick=""  data-iconpos="notext">About</a>
-					</li>
-					
-				</ul>
-			</div><!-- /panel -->
+			<pyinclude src="pages/navPannel.html">
 			
 			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
-				<a data-theme="custom-button" href="#left-panel"  >Menu</a>
+				<a data-theme="menu-button" href="#left-panel" class="ui-btn-left"  ></a>
+				<img class="navbar_separator" src="img/navbar_separator.png" />
 				<h1> My Appointments </h1>
-				<a data-theme="custom-button" href="#popupPanel"  data-rel="popup" data-position-to="window">Add</a>
+				<a data-theme="next-button" href="#" class="ui-btn-right"></a>
 			</div>
 			
 			<div data-role="content" id="appo-content" >
 				<ul data-role="listview"  data-theme="appoList">
 					<li data-icon="delete" style="" onclick="$.mobile.changePage('#appoDetails');" >
 						<div style="border:1px solid #528EBF;background-color:white;margin-right:10px;">
-							<table dir="ltr" cellspacing="3px" style="width: 100%;" ><tbody>
+							<table cellspacing="3px" style="width: 100%;" ><tbody>
 								<tr >
 									<td style="" colspan="3">
 									<img class="app-bill-img"  src="img/bill.png">
@@ -55,7 +23,6 @@
 											<div class="appoDrName">Dr. Name is here</div>
 											
 										</div>
-										
 										
 										<hr class='splitter loginFormSplitter'>
 									</td>

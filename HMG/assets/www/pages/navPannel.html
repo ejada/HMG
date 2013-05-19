@@ -1,0 +1,101 @@
+
+<div data-role="panel" id="left-panel" data-position="left" data-display="reveal">
+				<ul data-role="listview" >
+					<li data-icon="false" >
+						<div class="anonymousUserPanel" style="width: 100%; height: 100%;" >
+							<table  border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+								<tr style="height: 50%;">
+									<td colspan=2 class="pannelUserTab">
+										<input data-theme="pannel-button" id="" style="border:none;" type="button" data-mini="true" onclick='$.mobile.changePage("#login-page");' data-icon='anonymous-icon'  value='<pyloc src="sPanel.anonymousUser">' ></input>
+									</td>
+								</tr>
+								<tr>
+									<td width ="50%" class="pannelVerifyTab">
+										<input data-theme="pannel-button" id="verifyBtn" type="button" data-mini="true" onclick='$.mobile.changePage("#login-page");' data-icon='register-icon' value='<pyloc src="sPanel.login">' ></input>
+									</td>
+									<td width ="50%" class="pannelRegTab">
+										<input data-theme="pannel-button" id="" type="button" data-mini="true" onclick='$.mobile.changePage("#reg-page");' data-icon='false' value='<pyloc src="sPanel.register">' ></input>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						
+						<div class="userloggingPanel" style="width: 100%; height: 100%;">
+							<table dir="ltr" border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+								<tr style="height: 50%;">
+									<td colspan=2 class="pannelUserTab">
+										<input data-theme="pannel-button" id="pannelUserBtn" style="border:none;" type="button" data-mini="true" onclick='' data-icon='loggedin-icon'  value='<pyloc src="sPanel.notLogged">' ></input>
+									</td>
+								</tr>
+								<tr>
+									<td width ="50%" class="pannelVerifyTab">
+										<input data-theme="pannel-button" id="verifyBtn" type="button" data-mini="true" onclick='$.mobile.changePage("#validate-page");' data-icon='verify-icon' value='<pyloc src="sPanel.verify">' ></input>
+									</td>
+									<td width ="50%" class="pannelRegTab">
+										<input data-theme="pannel-button" id="" type="button" data-mini="true" onclick='$.mobile.changePage("#reg-page");' data-icon='register-icon' value='<pyloc src="sPanel.changeUser">' ></input>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						
+						<div class="LoggedUserPanel" style="width: 100%; height: 100%;">
+							<table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+								<tr >
+									<td width="30%" style="padding: 5px;">
+										<img class="loggedUserIcon" src="img/loggedin_icon.png" />
+									</td>
+									<td >
+										<div class="welcomeMsg" ><pyloc src="sPanel.welcome"> <div class="panelUserName">Mr. Amr</div></div>
+										<div class="signout" ><a href="#" class="signout"><pyloc src="sPanel.signout"></a></div>
+										
+									</td>
+								</tr>
+							</tbody></table>
+							
+						</div>
+					</li>
+					
+					<li  data-icon="false" class="appoTab">
+						<a class="pannelText"  href="#appo-page" onclick=""  >
+							<img src="img/appo_icon.png" class="ui-li-icon nav-thumb" />
+							<pyloc src="sPanel.appointments">
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#news-page" onclick=""  >
+							<img src="img/news_icon.png" class="ui-li-icon nav-thumb" />
+							<pyloc src="sPanel.news">
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText" href="#staff" onclick=""  data-iconpos="notext">
+							<img src="img/doctors_icon.png" class="ui-li-icon nav-thumb" />
+							<pyloc src="sPanel.doctors">
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText" href="#" onclick="App.OpenMapPage();">
+							<img src="img/places_icon.png" class="ui-li-icon nav-thumb" />
+							<pyloc src="sPanel.locations">
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#" onclick="">
+							<img src="img/careers_icon.png" class="ui-li-icon nav-thumb" />
+							<pyloc src="sPanel.careers">
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#" onclick=""  >
+							<img src="img/about_icon.png" class="ui-li-icon nav-thumb" />
+							<pyloc src="sPanel.about">
+						</a>
+					</li>
+					
+				</ul>
+			</div><!-- /panel -->

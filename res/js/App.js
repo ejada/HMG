@@ -80,6 +80,7 @@ $(document).bind("mobileinit",function(){
 	
 	LoginController.init();
 	RegController.init();
+	AppoController.init();
 	MapController.init();
 });
 

@@ -30,4 +30,11 @@
 		<nature>com.android.ide.eclipse.adt.AndroidNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>assets/www</name>
+			<type>2</type>
+			<location>C:/Users/Ashady/Documents/GitHub/HMG/res</location>
+		</link>
+	</linkedResources>
 </projectDescription>

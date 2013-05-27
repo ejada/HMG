@@ -150,6 +150,7 @@ LoginController = (function(){
 	    });
 		
 		/*
+		http://spdev01/en/MediaCenter/news/_vti_bin/ListData.svc/Pages?$filter=Smartdevices eq true
 		var x = { sendMessage:{doctorID:"4216",ProjectID:"12",ClinicID:"2",LanguageID:2}};
 		
 	    var jqxhr = $.ajax({

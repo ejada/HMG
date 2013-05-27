@@ -40,5 +40,22 @@
 	"validatePage":{
 		"header"		:["Validation","تأكيد"],
 		"msg"			:["Validation code has been sent to your by SMS, Please enter the code below to login","تم ارسال رسالة نصية برقم التفعيل, برجاء ادخال الرقم لاستكمال عملية الدخول"]
+	},
+	"appoPage":{
+		"header"		:["My Appointments","مواعيدي"],
+		"noAppo"		:["You don't have any scheduled Appointments","لا توجد اي مواعيد حاليا"],
+		"addAppo"		:["Make an appointment","اضافة موعد جديد"]
+	},
+	"newsPage":{
+		"header"		:["News","اخبارنا"],
+		"detailsHeader"	:["News Details","تفاصيل الاخبار"]
+	},
+	"newAppoPage":{
+		"header"		:["New Appointment","موعد جديد"],
+		"chooseExam"	:["Choose Clinic","اختر العيادة"],
+		"chooseHos"	 	:["Choose Hospital","اختر المستشفي"]
+	},
+	"myDrPage":{
+		"header"		:["My Doctors","اطبائي"]
 	}
 }

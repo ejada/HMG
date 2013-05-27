@@ -46,13 +46,8 @@ App.setFirstTimeUser = function (){
 
 App.OpenMapPage	=	function (){
 			
-			//TODO: test
-//			$.mobile.changePage("#page-map");
-//			DataContext.getMapCitiesNames();
-//			return;
-			//end
-			$.mobile.changePage("#page-map");
 			
+			MapController.loadMapApi();
 			
 		}
 
@@ -81,6 +76,8 @@ $(document).bind("mobileinit",function(){
 	LoginController.init();
 	RegController.init();
 	AppoController.init();
+	NewsController.init();
+	StaffController.init();
 	MapController.init();
 });
 

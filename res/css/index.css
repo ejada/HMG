@@ -36,6 +36,7 @@ body {
     width:100%;
 }
 
+table {width:100%;}
 
 h1 {
     font-size:24px;
@@ -125,10 +126,11 @@ hr.splitter {
 
 hr.splitter.loginFormSplitter{
 	background-image:url(../img/loginFormSeperator.png);
-	
+	margin : 0;
 }
 
 .ui-listview > hr.splitter.loginFormSplitter{
+	
 }
 
 
@@ -344,31 +346,142 @@ div[data-theme="pannel-button"] .ui-btn-inner{
 	font-size : 12px;
 }
 
-/*****************   **********************************/
+
+/***************** News **********************************/
+
+.news-img{
+	margin			: auto;
+	background-size	 : 100% 100%;
+	background-repeat: no-repeat;
+	background-position:center; 
+	width 			: 100%;
+	max-width		: 300px;
+	height 			: 79px;
+}
+
+.ui-icon.ui-icon-disclosure-icon.ui-icon-shadow{
+	background-color : transparent;
+	border-radius : 0;
+	border-width : 0;
+	-webkit-box-shadow	: none;
+	-moz-box-shadow		: none;
+	box-shadow			: none;
+	background-image : url(../img/disclosure_icon.png);
+	background-size : 100% 100%;
+	width	: 12px;
+	height	: 15px;
+	z-index :1;
+}
+
+.ui-icon.ui-icon-news-disclosure-icon.ui-icon-shadow{
+	background-color : transparent;
+	border-radius : 0;
+	border-width : 0;
+	-webkit-box-shadow	: none;
+	-moz-box-shadow		: none;
+	box-shadow			: none;
+	background-image : url(../img/disclosure_icon.png);
+	background-size : 100% 100%;
+	width	: 12px;
+	height	: 15px;
+	margin-top : -20px;
+	z-index :1;
+}
+
+.ui-li-has-arrow .ui-btn-inner a.news-cell.ui-link-inherit{
+	border:1px solid #528EBF;
+	padding	:0%;
+	padding-right	: 3px;
+	
+}
+
+.news-title{
+	white-space: normal;
+	margin-right : 10px;
+}
+.news-date{
+	text-align: right;
+	font-size: 12px;
+	color : gray;
+}
+
+.news-details-header{
+	background-size	 : 100% 100%;
+	background-repeat: no-repeat;
+	background-position:center; 
+	height : 200px;
+	max-width: 500px;
+	margin:auto;
+	position : relative;
+	margin-bottom : 20px;
+}
+
+.news-details-header-title-div{
+	position : absolute;
+	bottom :0;
+	width 	: 100%;
+	min-height: 50px;
+	background-color : rgba(0,0,0,.5);
+	border-top	: 3px solid red;
+}
+.news-details-header-title{
+	margin : 3px;
+	font-size: 20px;
+	color : white;
+	font-weight : bold;
+	text-shadow: none;
+	margin-bottom : 20px;
+}
+.news-details-header-date-div{
+	position : absolute;
+	bottom :0;
+	width 	: 100%;
+	background-color : rgba(0,0,0,.7);
+	text-align: right;
+	font-size: 12px;
+	color : white;
+	margin: auto;
+}
+
+.news-details-header-date{
+	margin : 3px;
+}
+
+.news-details-desc{
+	font-size: 15px;
+	color : gray;
+}
+
+/***************** Appo  **********************************/
 .ui-icon.ui-icon-arrow-r.ui-icon-shadow{}
 .ui-li-count.ui-btn-up-c.ui-btn-corner-all{}
 
 
+.ui-li.ui-li-static.ui-btn-up-appoList{
+	padding : .3em 5px;
+}
 
-
+.ui-btn-inner.ui-li{
+	padding : .1em 5px;
+}
+.ui-btn.ui-btn-icon-right.ui-li-has-arrow.ui-li.ui-btn-up-newsList{
+	background-image :linear-gradient(#ffffff,#f0f0f0);
+}
 .appoListSplitter {bottom: 0;}
 .appoTitle{
 	font-size: 20px;
-	text-align : left;
 	font-weight: bold;
 	margin: 5px 3px;
 }
 
 .appoDrName{
 	font-size: 15px;
-	text-align : left;
 	color: gray;
 	margin: 5px 3px;
 }
 
 .appoDetails{
 	font-size: 12px;
-	text-align : left;
 	color: gray;
 	font-weight: bold;
 	margin: 5px 3px;
@@ -394,14 +507,141 @@ div[data-theme="pannel-button"] .ui-btn-inner{
 
 .drProfDetails{
 	font-size: 15px;
-	text-align : left;
 	color: gray;
 	margin: 5px;
 }
 
 .drProfName{
 	font-size: 20px;
-	text-align : left;
 	font-weight: bold;
 	margin: 5px 3px;
+}
+
+.noAppoHint{
+	font-size: 20px;
+	color: gray;
+	margin: 5px;
+}
+
+.addAppoHint{
+	font-size: 20px;
+	color: red;
+	margin: 5px;
+}
+
+.addAppoHintImg{
+	
+}
+
+#emptyAppoList{
+	text-align : center;
+}
+
+/*****************  New Appo **********************************/
+
+.ui-li .ui-btn-inner a.new-appo-cell.ui-link-inherit{
+	border:1px solid #528EBF;
+	background-color : white;
+	padding : .3em 15px 0 50px
+}
+
+
+.ui-li.ui-li-static.ui-btn-up-newAppoList{
+	padding : .3em 5px;
+}
+
+
+.newAppoIcon{
+	padding	: .8em .5em;
+	width : 30px;
+}
+
+.newAppoDisclosure{
+	position: absolute;
+	right : 5px;
+}
+
+.newAppoTitle{
+	color : black;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+
+.newAppoDesc{
+	color : #f0f0f0;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
+hr.splitter.newAppoSplitter{
+	background-image:url(../img/loginFormSeperator.png);
+	margin : 0;
+	margin-top: 7px;
+	margin-right : 5px;
+}
+
+/*****************  MyDrs **********************************/
+
+.ui-li-has-arrow .ui-btn-inner a.dr-cell.ui-link-inherit{
+	border:1px solid #528EBF;
+	padding	:0em 15px 0em 80px;	
+}
+.ui-li-has-arrow .ui-btn-inner a.dr-cell.ui-link-inherit>.ui-li-thumb{
+	height : 59px;
+	top : 1px;
+}
+
+.ui-btn-up-drsList>.ui-btn-inner.ui-li>.ui-btn-text{
+	background : white;
+}
+
+.drs-name{
+	color : black;
+	font-size: 20px;
+	font-weight: bold;
+	white-space: normal;
+}
+
+.drs-details{
+	color : gray;
+	font-size: 12px;
+	font-weight: normal;
+	white-space: normal;
+}
+
+.dr-profile-img{
+	background-image:url(../img/dr_profile.png);
+	height : 100px;
+	background-size : 100% 100%;
+	background-position: center;
+	width : 100%;
+	max-width: 200px;
+}
+
+.dr-profile-div{
+	border:1px solid #528EBF;
+	background: white;
+	padding : 5px;
+}
+
+.dr-profile-div>table{
+	border-collapse:collapse; border-spacing: 0;
+}
+
+.dr-profile-div>table>tbody>tr, .dr-profile-div>table>tbody>tr>td{
+	padding : 0;
+}
+
+#drProfile-content{
+	padding : 5px;
+}
+
+#mapCanvas{
+	position:absolute;
+	top:40px;
+	bottom:0px;
+	left:0;
+	right:0;
 }

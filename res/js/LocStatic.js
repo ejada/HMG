@@ -25,6 +25,7 @@
 		"news"			:["News","اخبارنا"],
 		"doctors"		:["My Doctors","اطبائي"],
 		"locations"		:["Locations","الفروع"],
+		"settings"		:["Settings","الاعدادات"],
 		"careers"		:["Careers","وظائف"],
 		"about"			:["About","نحن"]
 		
@@ -55,7 +56,19 @@
 		"chooseExam"	:["Choose Clinic","اختر العيادة"],
 		"chooseHos"	 	:["Choose Hospital","اختر المستشفي"]
 	},
+	"appoSearchResultPage":{
+		"header"		:["Appointments","المواعيد المتاحه"]
+	},
+	"drAppoPage":{
+		"header"		:["Appointments","المواعيد المتاحه"]
+	},
 	"myDrPage":{
 		"header"		:["My Doctors","اطبائي"]
+	},
+	"settingsPage":{
+		"header"		:["Settings","الاعدادات"],
+		"ar"			:["عربي","عربي"],
+		"en"			:["English","English"],
+		"language"			:["Language","اللغة"]
 	}
 }

@@ -96,9 +96,19 @@ AppoController = (function(){
 		$.mobile.changePage("#appoDetails-page");
 	}
 	
+	function searchAppointments(){
+		$.mobile.changePage("#appoSearchResult-page");
+	}
+	
+	function availableDrAppointments(){
+		$.mobile.changePage("#drAppo-page");
+	}
+	
 	return {
 		init:init
 		,displayAppoDetails:displayAppoDetails
+		,searchAppointments:searchAppointments
+		,availableDrAppointments:availableDrAppointments
 	}
 })();
 

@@ -1,0 +1,26 @@
+<!--************************** Settings Screen *******************************--> 
+		<div data-role="page" id="settings-page">
+			
+			
+			<pyinclude src="pages/navPannel.html">
+			
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a data-theme="menu-button" href="#left-panel" class="ui-btn-left" ></a>
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1> <pyloc src="settingsPage.header"> </h1>
+			</div>
+			
+			<div data-role="content" id="settings-content" >
+				
+				<fieldset data-role="controlgroup" id="changeLang">
+					<legend><pyloc src="settingsPage.language"></legend>
+					<input type="radio" name="choice-lang" id="choice-lang-ar" value="ar">
+					<label for="choice-lang-ar"><pyloc src="settingsPage.ar"></label>
+					<input type="radio" name="choice-lang" id="choice-lang-en" value="en">
+					<label for="choice-lang-en"><pyloc src="settingsPage.en"></label>
+				</fieldset>
+	
+			</div>
+			
+		</div><!-- Staff-page -->

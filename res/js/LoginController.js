@@ -17,8 +17,14 @@ LoginController = (function(){
 			App.setFirstTimeUser();
 			localizeLoginPage();
 			$(loginBtSel).disableButton();
-
 		});		
+		
+		$(loginPageSel).on("pageshow", function() {
+			
+			//TODO: remove next line
+			//AppoController.availableDrAppointments();
+
+		});	
 		
 		$(userID).on("keyup",function(){
 			console.log("skjhd");

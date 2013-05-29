@@ -461,7 +461,7 @@ div[data-theme="pannel-button"] .ui-btn-inner{
 	padding : .3em 5px;
 }
 
-.ui-btn-inner.ui-li{
+li[data-theme="drsList"]>.ui-btn-inner.ui-li{
 	padding : .1em 5px;
 }
 .ui-btn.ui-btn-icon-right.ui-li-has-arrow.ui-li.ui-btn-up-newsList{
@@ -582,6 +582,115 @@ hr.splitter.newAppoSplitter{
 	margin-right : 5px;
 }
 
+
+
+#appoSearchResult-content{
+	padding : 3px;
+}
+
+div[data-theme="appo-result-list"].ui-collapsible-inset>.ui-collapsible-heading{
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	background-color : #ED1B2C;
+	margin : 0;
+}
+
+
+li[data-theme="drsSearchList"]>.ui-btn-inner.ui-li{
+	padding: 0;
+}
+
+.ui-btn-up-drsSearchList>.ui-btn-inner.ui-li>.ui-btn-text{
+	background : white;
+}
+
+.ui-icon.ui-icon-hmg-small-icon.ui-icon-shadow{
+	background-image : url(../img/hmg-small-icon.png);
+}
+.search-result-header-icon{
+	width : 20px;
+	height : 20px;
+	float : left;
+	margin-right: 3px;
+}
+
+a[data-theme="appo-result-list"]{
+	text-decoration : none;
+	color : white;
+	text-shadow: none;
+	font-weight: bold;
+}
+
+
+.ui-li-has-arrow .ui-btn-inner a.drSearch-cell.ui-link-inherit{
+	border:1px solid #528EBF;
+	padding	:0.7em 15px 0em 80px;	
+}
+.ui-li-has-arrow .ui-btn-inner a.drSearch-cell.ui-link-inherit>.ui-li-thumb{
+	height : 69px;
+	top : 1px;
+}
+
+div[data-theme="appo-result-list"].ui-collapsible-inset{
+	margin-top : .1em;
+}
+
+ul[data-theme="drsAppoList"].ui-listview{
+	margin: -10px;
+	border : 3px solid gray;
+	background-color : white;
+}
+
+.drAppo-Hospital{
+	border-top : 2px solid gray;
+}
+
+#drAppoHospitalName{
+	color : gray;
+}
+
+
+.drAppo-header.ui-li-static.ui-li{
+	margin-left: -10px;
+	margin-right : -10px;
+	font-size : 18px;
+	font-weight: bold;
+	text-shadow: none;
+	color : white;
+	background-color: red;
+	padding: .3em 15px;
+}
+
+table[class="drAppo-days"] {
+  border-collapse: collapse;
+}
+table[class="drAppo-days"] td, table[class="drAppo-days"] th {
+  border: 2px solid gray;
+  vertical-align: middle;
+}
+table[class="drAppo-days"] tr:first-child td {
+  border-top: 0;
+}
+table[class="drAppo-days"] tr:last-child td {
+  border-bottom: 0;
+}
+table[class="drAppo-days"] tr td:first-child,
+table[class="drAppo-days"] tr th:first-child {
+  border-left: 0;
+}
+table[class="drAppo-days"] tr td:last-child,
+table[class="drAppo-days"] tr th:last-child {
+  border-right: 0;
+}
+
+.drAppo-day{
+	min-height: 15px;
+	text-align : center;
+	color : gray;
+	font-weight: bold;
+	text-shadow: none;
+	padding: 0.5em;
+}
 /*****************  MyDrs **********************************/
 
 .ui-li-has-arrow .ui-btn-inner a.dr-cell.ui-link-inherit{
@@ -645,3 +754,4 @@ hr.splitter.newAppoSplitter{
 	left:0;
 	right:0;
 }
+

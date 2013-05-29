@@ -32,7 +32,6 @@ var App = {
 };
 
 App.initialize();
-App.LANG = "ar";
 App.isUserLogged = true;
 var mapAPIisLoaded = false;
 
@@ -79,6 +78,7 @@ $(document).bind("mobileinit",function(){
 	NewsController.init();
 	StaffController.init();
 	MapController.init();
+	SettingsController.init();
 });
 
 

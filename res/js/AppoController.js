@@ -58,7 +58,7 @@ AppoController = (function(){
 									+'<table cellspacing="3px" style="width: 100%;" ><tbody>'
 										+'<tr >'
 											+'<td style="" colspan="3">'
-												+'<img class="app-bill-img"  src="img/bill.png">'
+												+'<img class="app-bill-img"  src="img/alarm_off.png">'
 												+'<div>'
 													+'<div class="appoTitle">'+appo.title+'</div>'
 													+'<div class="appoDrName">'+appo.dr.title+appo.dr.name+'</div>'

@@ -12,10 +12,20 @@ SettingsController = (function(){
 			$("#choice-lang-"+App.LANG).attr ("checked", "checked").checkboxradio ("refresh");
 			
 			$("#changeLang").on('change', function(event) {
-				console.log($("input[name*=choice-lang]:checked").val());
+				var checked = $("input[name*=choice-lang]:checked").val();
+				console.log(checked);
 				var page = window.location.href; 
-				page = page.substring(page.indexOf("/HMG/")+5,page.lastIndexOf(".html")+5);
+				page = page.substring(page.indexOf("/HMG/")+9,page.lastIndexOf(".html")+5);
+				
+				if(checked == "ar")
+					page = page.replace("en","ar");
+				else
+					page = page.replace("ar","en");
+					
+				
 				console.log(page);
+				window.location = page+"#settings-page";
+				
 			});	
 		});	
 		

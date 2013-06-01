@@ -122,19 +122,19 @@ def localizePageEn(path):
 	localizePage(path, 0)
 #*****************************************************************#
 
-Creation = createMainPage("tmplt/tmplt.html","index.html")
+Creation = createMainPage("tmplt/tmplt.html","index_en.html")
 if Creation:
 	print "************* Main Page Created **************"
 else:
     print "************* Error in Main Page Creation **************"
 	
-localizePageEn("./index.html")
+localizePageEn("./index_en.html")
 
-Creation = createMainPage("tmplt/tmplt_ar.html","indexAr.html")
+Creation = createMainPage("tmplt/tmplt_ar.html","index_ar.html")
 if Creation:
     print "************* Main Page Created **************"
 else:
     print "************* Error in Main Page Creation **************"
 	
-localizePageAr("./indexAr.html")
+localizePageAr("./index_ar.html")
 

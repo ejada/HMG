@@ -53,7 +53,7 @@ App.OpenMapPage	=	function (){
 $(document).bind("mobileinit",function(){
 	console.log("mobileinit");
 	
- 
+ //init
 	if(App.LANG == "en"){
 		Loc = enLoc;
 		Loc.Dir = "ltr";

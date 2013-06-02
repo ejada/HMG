@@ -51,4 +51,6 @@
 - (void)setNotificationMessage:(NSDictionary *)notification;
 - (void)notificationReceived;
 
+- (void)checkNotificationReceived:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options;
+
 @end

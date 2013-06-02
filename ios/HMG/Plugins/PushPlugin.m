@@ -173,10 +173,18 @@
         NSLog(@"Msg: %@", jsonStr);
 
         NSString * jsCallBack = [NSString stringWithFormat:@"%@(%@);", self.callback, jsonStr];
+        
+        NSLog(@"callBack: %@", jsCallBack);
         [self.webView stringByEvaluatingJavaScriptFromString:jsCallBack];
         
         self.notificationMessage = nil;
     }
+}
+
+- (void)checkNotificationReceived:(NSMutableArray *)arguments withDict:(NSMutableDictionary *)options {
+    NSLog(@"checkNotificationReceived 1");
+    [self notificationReceived];
+    NSLog(@"checkNotificationReceived 2");
 }
 
 // reentrant method to drill down and surface all sub-dictionaries' key/value pairs into the top level json

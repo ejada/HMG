@@ -88,6 +88,21 @@
 
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    NSDictionary *userInfo =
+    [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+    if (userInfo) {
+        //        NSString *itemName = [localNotif.userInfo objectForKey:ToDoItemKey];
+        //        [viewController displayItem:itemName];  // custom method
+        //        app.applicationIconBadgeNumber = localNotif.applicationIconBadgeNumber-1;
+        
+        PushPlugin *pushHandler = [self getCommandInstance:@"PushPlugin"];
+        pushHandler.notificationMessage = userInfo;
+        pushHandler.isInline = YES;
+      //  [pushHandler notificationReceived];
+    }
+
+    
 
     return YES;
 }

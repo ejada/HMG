@@ -138,3 +138,21 @@ else:
 	
 localizePageAr("./index_ar.html")
 
+#*****************************************************************#
+
+Creation = createMainPage("tmplt/tmplt_iOS.html","index_iOS_en.html")
+if Creation:
+	print "************* EN iOS Main Page Created **************"
+else:
+    print "************* Error in EN iOS Main Page Creation **************"
+	
+localizePageEn("./index_iOS_en.html")
+
+Creation = createMainPage("tmplt/tmplt_iOS_ar.html","index_iOS_ar.html")
+if Creation:
+    print "************* AR iOS Main Page Created **************"
+else:
+    print "************* Error in AR iOS Main Page Creation **************"
+	
+localizePageAr("./index_iOS_ar.html")
+

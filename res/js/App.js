@@ -137,28 +137,67 @@ function errorHandler (error) {
 
 
 App.initialize();
-App.isUserLogged = true;
 var mapAPIisLoaded = false;
+App.user = {};
 
-App.setFirstTimeUser = function (){
-	$("#pannelUserBtn").hide();
-	$("#pannelGuestBtn").show();
-	console.log("3");
+App.checkFirstTimeUser = function (){
+	console.log("checkFirstTimeUser");
+	//$(".appoTab").hide();
+	App.user = App.getUserDetails();
+	if(App.user != null){
+		// Exist User
+		//$(".userloggingPanel").show();
+		$(".userloggingPanel").hide();
+		$(".LoggedUserPanel").show();
+		$(".anonymousUserPanel").hide();
+	}else{
+		//Anonymous User
+		$(".userloggingPanel").hide();
+		$(".LoggedUserPanel").hide();
+		$(".anonymousUserPanel").show();
+		$(".anonymousUserPanel").show();
+	}
+}
+
+App.getUserDetails= function(){
+	return $.jStorage.get("hmg.user.current");
+}
+App.setUserDetails = function(userId, userMobile,patientID,patientName){
+	$.jStorage.set("hmg.user.current", {id:userId,mobile:userMobile,patientID:patientID,name:patientName});
 }
 
 
-
 App.OpenMapPage	=	function (){
-			
-			
-			MapController.loadMapApi();
-			
-		}
+	MapController.loadMapApi();
+}
 
 $(document).bind("mobileinit",function(){
 	console.log("mobileinit");
 	
+<<<<<<< HEAD
+	
+	(function($){
+		/*
+		 * Override Jquery mobile change Page
+		 */
+		 var _oldChangePage = $.mobile.changePage;
+
+		$.mobile.changePage = function(to,options) {
+			//console.log("to: "+to+" op: "+options);
+			// put your custom code here
+			// .....
+
+			// in case you want to apply the default behaviour
+			return _oldChangePage(to,options);
+		};
+	})(jQuery);
+
+
+||||||| merged common ancestors
+ 
+=======
  //init
+>>>>>>> 254d5aee8902de3abc7c99e40cbb9f607c47a389
 	if(App.LANG == "en"){
 		Loc = enLoc;
 		Loc.Dir = "ltr";
@@ -166,16 +205,8 @@ $(document).bind("mobileinit",function(){
 		Loc = arLoc;
 		Loc.Dir = "rtl";
 	}
-	//$.mobile.autoInitializePage = false;
-	if(App.isUserLogged == true ){
-		document.location.hash = "#login-page";
-		console.log("1");
-	}else{
-		document.location.hash = "#news-page";
-			console.log("2");
-	}
 	
-	//$.mobile.initializePage();
+	App.checkFirstTimeUser();
 	
 	LoginController.init();
 	RegController.init();
@@ -184,10 +215,14 @@ $(document).bind("mobileinit",function(){
 	StaffController.init();
 	MapController.init();
 	SettingsController.init();
+	ValidationController.init();
 });
 
 
 (function($) {
+	
+	
+	
 	/*
 	 * Changes the displayed text for a jquery mobile button. Encapsulates the
 	 * idiosyncracies of how jquery re-arranges the DOM to display a button for

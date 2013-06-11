@@ -1,3 +1,4 @@
+<<<<<<< HEAD:source/www/pages/appointments.html
 <!--************************** Home Screen *******************************--> 
 		<div data-role="page" id="appo-page" class="custom-content">
 			
@@ -290,3 +291,311 @@
 			</div>
 		</div><!-- drAppo-page -->
         
+=======
+<!--************************** Home Screen *******************************--> 
+		<div data-role="page" id="appo-page" class="custom-content">
+			
+			<pyinclude src="pages/navPannel.html">
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a data-theme="menu-button" href="#left-panel" class="ui-btn-left"  ></a>
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1><pyloc src="appoPage.header"></h1>
+				<a data-theme="new-appo-button" href="#drAppo-page" class="ui-btn-right"></a>
+			</div>
+			
+			<div data-role="content" id="appo-content" >
+				<div id="emptyAppoList" onclick="alert('lksjd')">
+					<div class="noAppoHint"><pyloc src="appoPage.noAppo"></div>
+					<img class="addAppoHintImg"  src="img/loggedin_icon.png">
+					<div class="addAppoHint"><pyloc src="appoPage.addAppo"></div>
+				</div>
+				<ul data-role="listview"  data-theme="appoList" id="appoList">
+				</ul>
+			</div>
+			
+		</div><!-- Home-page -->
+		
+		
+		
+		<!--************************** Appointment Details Screen *******************************--> 
+		<div data-role="page" id="appoDetails-page" class="custom-content">
+			
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a href="#" data-rel="back" class="ui-btn-left"></a> 
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1 id="appoDetailsHeader"></h1>
+			</div>
+			
+			<div data-role="content" id="appoDetails-content" >
+				<ul data-role="listview"  data-theme="appoList">
+					<li data-icon="delete" style="">
+						<div style="border:1px solid #528EBF;background-color:white;">
+							<table dir="ltr" cellspacing="3px" style="width: 100%;" ><tbody>
+								<tr >
+									<td style="" colspan="3">
+									<img class="app-bill-img"  src="img/bill.png">
+										<div>
+											<div class="appoTitle" id="appoDetailsTitle"></div>
+											<div class="appoDrName" id="appoDetailsDr"></div>
+										</div>
+										<hr class='splitter loginFormSplitter'>
+									</td>
+								</tr>
+								<tr>
+									<td style="">
+										<img class="app-cal-img"  src="img/cal.png">
+										<div class="appoDetails" id="appoDetailsDate"></div>
+									</td>
+									<td style="">
+										<img class="app-cal-img"  src="img/clock.png">
+										<div class="appoDetails" id="appoDetailsTime"></div>
+									</td>
+									<td style="">
+										<img class="app-cal-img"  src="img/pin.png">
+										<div class="appoDetails" id="appoDetailsProject"></div>
+									</td>
+								</tr>
+							</tbody></table>
+							<div style="text-align:center;" id="appoDetailsMapDiv">
+								
+							</div>
+						</div>
+						
+					</li>
+					
+				</ul>
+			</div>
+			
+			<div data-role="footer" data-theme="d" data-position="fixed" data-tap-toggle="false" class="custom-tabbar-1" dir="ltr">
+					<div style="margin:10px;">
+						<table width="100%"><tbody><tr>
+							<td width="50%" style="margin:10px;"><input data-theme="custom-button-1" id="registerBtn" type="button" data-mini="true" onclick=''  value="Cancel" ></input></td>
+							<td  width="50%" style="margin:10px;"><input data-theme="custom-button-3" id="registerBtn" type="button" data-mini="true" onclick=''  value="Reschedule" ></input></td>
+						</tr></tbody></table>
+						
+					</div>
+				</div>
+			
+		</div><!-- appoDetails-page -->
+		
+		<!--************************** New Appointment Screen *******************************--> 
+		<div data-role="page" id="newAppo-page" class="custom-content">
+			
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a href="#" data-rel="back" class="ui-btn-left"></a> 
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1><pyloc src="newAppoPage.header"></h1>
+			</div>
+			
+			<div data-role="content" id="newAppo-content" >
+				
+				<ul data-role="listview" data-theme="newAppoList">
+					<li data-icon="false">
+						<a href="#"  class="new-appo-cell">
+							<img src="img/clinic_icon.png" class="newAppoIcon">
+							<div>
+								<div class="newAppoTitle"><pyloc src="newAppoPage.chooseExam"></div>
+								<img src="img/disclosure_icon.png" class="newAppoDisclosure">
+								<hr class='splitter newAppoSplitter'>
+								<div class="newAppoDesc" id="newAppoChosenExam"></div>
+							</div>
+						</a>
+					</li>
+					<li data-icon="false">
+						<a href="#"  class="new-appo-cell">
+							<img src="img/hospital_icon.png" class="newAppoIcon">
+							<div>
+								<div class="newAppoTitle"><pyloc src="newAppoPage.chooseHos"></div>
+								<img src="img/disclosure_icon.png" class="newAppoDisclosure">
+								<hr class='splitter newAppoSplitter'>
+								<div class="newAppoDesc" id="newAppoChosenHos">Chosen Hospital</div>
+							</div>
+						</a>
+					</li>
+					
+				</ul>
+			</div>
+			
+			<div data-role="footer" data-theme="d" data-position="fixed" data-tap-toggle="false" class="custom-tabbar-1" dir="ltr">
+					<div style="margin:10px;">
+						<input data-theme="custom-button-1" id="" type="button" data-mini="true" onclick='AppoController.searchAppointments();'  value="Search" ></input>
+					</div>
+				</div>
+			
+		</div><!-- newAppo-page -->
+		
+		<!--************************** Appointment Search Result Screen *******************************--> 
+		<div data-role="page" id="appoSearchResult-page" >
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a href="#" data-rel="back" class="ui-btn-left"></a> 
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1><pyloc src="appoSearchResultPage.header"></h1>
+			</div>
+			
+			<div data-role="content" id="appoSearchResult-content" >
+				
+				<div data-role="collapsible" data-iconpos="right"  data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-collapsed="false" data-theme="appo-result-list" data-content-theme="appo-result">
+					<h4><img class="search-result-header-icon" src="img/hmg-small-icon.png" />Hospital Name</h4>
+					<ul data-role="listview" data-theme="drsSearchList">
+						<li style="" data-icon="disclosure-icon" >
+							<a href="#" onclick="AppoController.availableDrAppointments();" class="drSearch-cell">
+								<img src="img/dr.png">
+								<div>
+									<div class="drs-name">Dr.Name is here</div>
+									<div class="drs-details">Department</div>
+								</div>
+							</a>
+						</li>
+						<li style="" data-icon="disclosure-icon" >
+							<a href="#" onclick="AppoController.availableDrAppointments();" class="drSearch-cell">
+								<img src="img/dr.png">
+								<div>
+									<div class="drs-name">Dr.Name is here</div>
+									<div class="drs-details">Department</div>
+								</div>
+							</a>
+						</li>
+						<li style="" data-icon="disclosure-icon" >
+							<a href="#" onclick="AppoController.availableDrAppointments();" class="drSearch-cell">
+								<img src="img/dr.png">
+								<div>
+									<div class="drs-name">Dr.Name is here</div>
+									<div class="drs-details">Department</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div data-role="collapsible" data-iconpos="right"  data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-theme="appo-result-list" data-content-theme="appo-result">
+					<h4><img class="search-result-header-icon" src="img/hmg-small-icon.png" />Hospital Name</h4>
+					<ul data-role="listview" data-theme="drsSearchList">
+						<li style="" data-icon="disclosure-icon" >
+							<a href="#" onclick="StaffController.openDrProfile(1);" class="drSearch-cell">
+								<img src="img/dr.png">
+								<div>
+									<div class="drs-name">Dr.Name is here</div>
+									<div class="drs-details">Department</div>
+								</div>
+							</a>
+						</li>
+						<li style="" data-icon="disclosure-icon" >
+							<a href="#" onclick="StaffController.openDrProfile(1);" class="drSearch-cell">
+								<img src="img/dr.png">
+								<div>
+									<div class="drs-name">Dr.Name is here</div>
+									<div class="drs-details">Department</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div data-role="collapsible" data-iconpos="right"  data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-theme="appo-result-list" data-content-theme="appo-result">
+					<h4><img class="search-result-header-icon" src="img/hmg-small-icon.png" />Hospital Name</h4>
+					<ul data-role="listview" data-theme="drsSearchList">
+						<li style="" data-icon="disclosure-icon" >
+							<a href="#" onclick="StaffController.openDrProfile(1);" class="drSearch-cell">
+								<img src="img/dr.png">
+								<div>
+									<div class="drs-name">Dr.Name is here</div>
+									<div class="drs-details">Department</div>
+								</div>
+							</a>
+						</li>
+						<li style="" data-icon="disclosure-icon" >
+							<a href="#" onclick="StaffController.openDrProfile(1);" class="drSearch-cell">
+								<img src="img/dr.png">
+								<div>
+									<div class="drs-name">Dr.Name is here</div>
+									<div class="drs-details">Department</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+		</div><!-- appoSearchResult-page -->
+		
+		
+		<!--************************** A valiable Dr Appointment Screen *******************************--> 
+		<div data-role="page" id="drAppo-page" >
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a href="#" data-rel="back" class="ui-btn-left"></a> 
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1><pyloc src="drAppoPage.header"></h1>
+			</div>
+			
+			<div data-role="content" id="drAppo-content" >
+				<ul data-role="listview" data-theme="drsAppoList" >
+					<li style="" data-icon="false"  >
+						<img src="img/dr.png">
+						<div>
+							<div class="drs-name">Dr.Name is here</div>
+							<div class="drs-details">Department</div>
+						</div>
+					</li>
+					<li class="drAppo-Hospital" data-icon="disclosure-icon"  >
+						<a href="#" onclick="">
+							<img class="ui-li-icon" src="img/pin.png">
+							<div>
+								<div id="drAppoHospitalName">Hospital Name</div>
+							</div>
+						</a>
+					</li>
+					
+					<li style="" data-icon="false" class="drAppo-header" >
+						<div>Date</div>
+					</li>
+					
+					<li style="" data-icon="false" class="drAppoDragable" >
+					
+						<div class="previous-arrow"></div>
+						<div id="daysPanelDiv" class="scrolableRow">
+							<div id="daysPanel" class="row panel_list">
+								
+							</div>
+						</div>
+						<div class="next-arrow"></div>
+						
+					</li>
+					
+					<li style="" data-icon="false" class="drAppo-header" >
+						
+						<div ><img class="search-result-header-icon" src="img/hmg-small-icon.png" />Time</div>
+						<div style="position:absolute; right:2px; float:right;"id="headerSelectedDate">18 May</div>
+					</li>
+					
+					<li class="drAppoDragable">
+						<div class="previous-arrow"></div>
+						<div id="timePanelDiv" class="scrolableRow">
+							<div id="timePanel" class="row panel_list">
+								
+							</div>
+						</div>
+						<div class="next-arrow"></div>
+					</li>
+					
+					<li style="" data-icon="false" class="drAppo-appo-details" >
+						<div>
+							<table><tbody><tr>
+								<td id="drAppoDateVal">TUS 25 May</td>
+								<td id="drAppoTimeVal">3:30 AM</td>
+							</tr></tbody></table>
+						</div>
+						<input data-theme="custom-button-1" type=button data-icon="check" value="Book Appointment"></input>
+					</li>
+					
+				</ul>
+					
+			</div>
+		</div><!-- drAppo-page -->
+        
+		
+>>>>>>> origin/master:res/pages/appointments.html

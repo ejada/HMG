@@ -1,3 +1,4 @@
+<<<<<<< HEAD:source/www/css/themeHMG.css
 
 
 /***************** Custom Input ******************************/
@@ -311,4 +312,377 @@ a[data-theme="new-appo-button"].ui-shadow{
 label.ui-select {
 	color :gray;
 	font-weight : bold;
+=======
+
+
+.cust-block-css {
+    display: none;
+    cursor: wait;
+    position: fixed;
+    top: 0px;
+    left: 0px;  
+    width: 100%;
+    height: 100%;
+    z-index: 9; 
+    background-color: #1e1e1e;
+    opacity: 0.8;
+}
+
+/***************** Custom Input ******************************/
+.ui-input-text.ui-shadow-inset.ui-corner-all.ui-btn-shadow.ui-body-c{
+	border-radius:.3em;
+	
+}
+
+label.ui-input-text{
+	color :#999999;
+	font-weight : bold;
+}
+
+.ui-input-text.ui-body-c{
+	border : 1px solid #f0f0f0;
+}
+
+.ui-input-text.ui-shadow-inset{
+	-webkit-box-shadow : 3px 0px 3px rgba(0,0,0,.2);
+	-moz-box-shadow	: 3px 0px 3px rgba(0,0,0,.2);
+	box-shadow	: 3px 0px 3px rgba(0,0,0,.2);
+}
+
+div.ui-input-text input.ui-input-text.validate-input{
+	padding-left : 30px;
+	color : #999999;
+	font-weight	:bold;
+}
+
+.validation-img{
+	position:absolute;
+	top:12px; 
+	left:10px;
+	width:18px;
+	height:16px;
+}
+
+/***************** Navigation Bar **********************************/
+.custom-navbar-1 {
+	background-color:none ; 
+	background-size:100% 100%; 
+	background-repeat:repeat; 
+	background-image: url(../img/nav_background.png);
+	border-radius:0em 0em 0em 0em ;
+	color: rgb(255, 255, 255);
+	text-shadow	:none;
+	height	: 42px;
+}
+
+
+.ui-header .ui-title{
+	font-family:Helvetica;
+	font-size: 20px;
+	font-weight	:bold;
+	white-space: normal;
+	margin-top	:9px;
+}
+.ui-header .ui-title { margin-right:50px; margin-left:50px; }
+
+
+.navbar_separator{
+	height: 70%;
+	width : 3px;
+	margin : 6px 2px auto 50px;
+	float : left;
+}
+
+
+/***************** Menu Button **********************************/
+a[data-theme="menu-button"].ui-btn-left.ui-btn.ui-shadow.ui-btn-corner-all,
+a[data-theme="menu-button"].ui-btn-right.ui-btn.ui-shadow.ui-btn-corner-all {
+	
+    background-color:none ; 
+    background-size:70% 70%; 
+	background-position: center;
+	background-repeat: no-repeat; 
+	border-radius:0em;
+	width:35px;
+	height:30px;
+    padding:0px;
+	top : 5px;
+	left : 10px;
+	right: auto;
+	background-image: url(../img/menu_btn.png);
+}	
+
+
+a[data-theme="menu-button"] .ui-btn-inner {
+	border: 0px;
+}
+
+a[data-theme="menu-button"].ui-shadow{
+    box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
+}
+
+
+.ui-btn-up-menu-button{
+	border: none;
+}
+
+.ui-btn-down-menu-button,.ui-btn-hover-menu-button,.ui-btn-active-menu-button,.aBtnSelector-menu-button{
+	border: 2px solid black;;
+}
+/*****************  **********************************/
+
+/***************** Back Button **********************************/
+a[data-rel="back"] {
+	border: none;
+    background-color: transparent ; 
+    background-size:100% 100%; 
+    background-image :  url(../img/back_btn.png);;
+	background-repeat: no-repeat; 
+	border-radius:0em;
+	width:50px;
+	height:25px;
+    padding:0px;
+}
+
+.ui-header-fixed [data-rel="back"].ui-btn-left{
+	top : 8px;
+}
+
+a[data-rel="back"].ui-btn-down-a,
+a[data-rel="back"].ui-btn-hover-a,
+a[data-rel="back"].ui-btn-active-a,
+a[data-rel="back"].aBtnSelector-a{
+	
+	
+}
+
+a[data-rel="back"] .ui-btn-inner {
+	border: 0px;
+}
+
+a[data-rel="back"].ui-shadow{
+	
+    box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
+}
+
+
+.ui-btn-up-next-button{
+	background-image: url(../img/next_btn.png);
+}
+
+.ui-btn-down-next-button,.ui-btn-hover-next-button,.ui-btn-active-next-button,.aBtnSelector-next-button{
+	background-image: url(../img/custom-btn-active.png);
+}
+/***************** Next Button **********************************/
+a[data-theme="next-button"].ui-btn-right.ui-btn.ui-shadow.ui-btn-corner-all {
+	border: none;
+    background-color:none ; 
+    background-size:100% 100%; 
+	background-repeat: no-repeat; 
+	border-radius:0em;
+	width:50px;
+	height:30px;
+    padding:0px;
+	top : 6px;
+}	
+
+
+a[data-theme="next-button"] .ui-btn-inner {
+	border: 0px;
+}
+
+a[data-theme="next-button"].ui-shadow{
+    box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
+}
+
+
+.ui-btn-up-next-button{
+	background-image: url(../img/next_btn.png);
+}
+
+.ui-btn-down-next-button,.ui-btn-hover-next-button,.ui-btn-active-next-button,.aBtnSelector-next-button{
+	background-image: url(../img/next_pressed_btn.png);
+}
+
+/***************** Done Button **********************************/
+a[data-theme="done-button"].ui-btn-right.ui-btn.ui-shadow.ui-btn-corner-all {
+	border: none;
+    background-color:none ; 
+    background-size:100% 100%; 
+	background-repeat: no-repeat; 
+	border-radius:0em;
+	width:50px;
+	height:30px;
+    padding:0px;
+	top : 6px;
+}	
+
+
+a[data-theme="done-button"] .ui-btn-inner {
+	border: 0px;
+}
+
+a[data-theme="done-button"].ui-shadow{
+    box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
+}
+
+
+.ui-btn-up-done-button{
+	background-image: url(../img/done_btn.png);
+}
+
+.ui-btn-down-done-button,.ui-btn-hover-done-button,.ui-btn-active-done-button,.aBtnSelector-done-button{
+	background-image: url(../img/done_pressed_btn.png);
+}
+
+/***************** Search Button **********************************/
+a[data-theme="search-button"].ui-btn-right.ui-btn.ui-shadow.ui-btn-corner-all {
+	border: none;
+    background-color:none ; 
+    background-size:100% 100%; 
+	background-repeat: no-repeat; 
+	border-radius:0em;
+	width:50px;
+	height:30px;
+    padding:0px;
+	top : 6px;
+}	
+
+
+a[data-theme="search-button"] .ui-btn-inner {
+	border: 0px;
+}
+
+a[data-theme="search-button"].ui-shadow{
+    box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
+}
+
+
+.ui-btn-up-search-button{
+	background-image: url(../img/search_btn.png);
+}
+
+.ui-btn-down-search-button,.ui-btn-hover-search-button,.ui-btn-active-search-button,.aBtnSelector-search-button{
+	background-image: url(../img/search_pressed_btn.png);
+}
+
+/***************** New Appo Button **********************************/
+a[data-theme="new-appo-button"].ui-btn-right.ui-btn.ui-shadow.ui-btn-corner-all {
+	border: none;
+    background-color:none ; 
+    background-size:100% 100%; 
+	background-repeat: no-repeat; 
+	border-radius:0em;
+	width:50px;
+	height:30px;
+    padding:0px;
+	top : 6px;
+}	
+
+
+a[data-theme="new-appo-button"] .ui-btn-inner {
+	border: 0px;
+}
+
+a[data-theme="new-appo-button"].ui-shadow{
+    box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
+}
+
+
+.ui-btn-up-new-appo-button{
+	background-image: url(../img/new_appo_btn.png);
+}
+
+.ui-btn-down-new-appo-button,.ui-btn-hover-new-appo-button,.ui-btn-active-new-appo-button,.aBtnSelector-new-appo-button{
+	background-image: url(../img/new_appo_pressed_btn.png);
+}
+
+/***************** custom-button-1 **********************************/
+
+
+div[data-theme="custom-button-1"] span .ui-btn-text  {
+	
+	data-shadow:false;
+	border: none; 
+	font-size:15px;
+	color: #ffffff;
+	font-weight: bold;
+	text-shadow: none;
+	box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
+	background-image: none;
+	background-color:none ;
+	
+}
+
+div[data-theme="custom-button-1"]  {
+	border-radius:0em;
+	border: none; 
+	background-color:transparent ;
+	data-corners:false;
+	data-shadow:false;
+	background-size:100% 100%; 
+	background-repeat: no-repeat; 
+	
+	box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;
+	height	: 37px
+}
+
+
+div[data-theme="custom-button-1"] .ui-btn-inner{
+	padding-top	: 0.5em;
+}
+
+
+.ui-btn-up-custom-button-1, .ui-btn-hover-custom-button-1{
+	background-image: url(../img/button.png);
+}
+
+/* Active State */
+.ui-btn-down-custom-button-1,.ui-btn-active-custom-button-1,.aBtnSelector,.aBtnSelector-custom-button-1{
+	background-image: url(../img/button_pressed.png);
+}
+
+
+/***************** Select Menu  **********************************/
+
+.ui-select >.ui-btn-corner-all >span.ui-btn-inner{
+	border-top: 0;
+}
+
+.ui-select >.ui-btn-corner-all{
+	-webkit-border-radius : .3em;
+	border-radius: 0.3em;
+}
+
+.ui-select >.ui-btn-up-c{
+	border: 0;
+}
+
+.ui-select>.ui-shadow{
+	-webkit-box-shadow : 0 3px 3px rgba(0,0,0,.2);
+	-moz-box-shadow	: 0 3px 3px rgba(0,0,0,.2);
+	box-shadow	: 0 3px 3px rgba(0,0,0,.2);
+}
+
+.ui-icon.ui-icon-select-icon.ui-icon-shadow{
+	background-color : transparent;
+	border-radius : 0;
+	border-width : 0;
+	-webkit-box-shadow	: none;
+	-moz-box-shadow		: none;
+	box-shadow			: none;
+	background-image : url(../img/select_icon.png);
+	background-size : 100% 100%;
+	width : 40px;
+	height : 100%;
+	right : 0;
+	top : 0;
+	margin-top: 0;
+	margin-right: 0;
+}
+
+label.ui-select {
+	color :gray;
+	font-weight : bold;
+>>>>>>> origin/master:res/css/themeHMG.css
 }

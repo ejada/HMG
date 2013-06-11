@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+         <meta charset="utf-8" />
+ <meta name="format-detection" content="telephone=no" />
+ <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height" />
+
+<link rel="stylesheet" type="text/css" href="css/themeHMG.css" />      
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+    </head>
+    
+    <body>
+    
+        
+
+<!--************************** Login Screen *******************************--> 
+		<div data-role="page" id="login-page" data-title="LogIn" class="custom-content">
+			
+			
+			
+			
+<div data-role="panel" id="left-panel" data-position="left" data-display="reveal">
+				<ul data-role="listview" >
+					<li data-icon="false" >
+						<div class="anonymousUserPanel" style="width: 100%; height: 100%;" >
+							<table  border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+								<tr style="height: 50%;">
+									<td colspan=2 class="pannelUserTab">
+										<input data-theme="pannel-button" id="" style="border:none;" type="button" data-mini="true" onclick='$.mobile.changePage("#login-page");' data-icon='anonymous-icon'  value='You are not logged in' ></input>
+									</td>
+								</tr>
+								<tr>
+									<td width ="50%" class="pannelVerifyTab">
+										<input data-theme="pannel-button" id="verifyBtn" type="button" data-mini="true" onclick='$.mobile.changePage("#login-page");' data-icon='register-icon' value='Login' ></input>
+									</td>
+									<td width ="50%" class="pannelRegTab">
+										<input data-theme="pannel-button" id="" type="button" data-mini="true" onclick='$.mobile.changePage("#reg-page");' data-icon='false' value='Register' ></input>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						
+						<div class="userloggingPanel" style="width: 100%; height: 100%;">
+							<table dir="ltr" border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+								<tr style="height: 50%;">
+									<td colspan=2 class="pannelUserTab">
+										<input data-theme="pannel-button" id="pannelUserBtn" style="border:none;" type="button" data-mini="true" onclick='' data-icon='loggedin-icon'  value='notLogged' ></input>
+									</td>
+								</tr>
+								<tr>
+									<td width ="50%" class="pannelVerifyTab">
+										<input data-theme="pannel-button" id="verifyBtn" type="button" data-mini="true" onclick='$.mobile.changePage("#validate-page");' data-icon='verify-icon' value='verify' ></input>
+									</td>
+									<td width ="50%" class="pannelRegTab">
+										<input data-theme="pannel-button" id="" type="button" data-mini="true" onclick='$.mobile.changePage("#reg-page");' data-icon='register-icon' value='Change User' ></input>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						
+						<div class="LoggedUserPanel" style="width: 100%; height: 100%;">
+							<table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+								<tr >
+									<td width="30%" style="padding: 5px;">
+										<img class="loggedUserIcon" src="img/loggedin_icon.png" />
+									</td>
+									<td >
+										<div class="welcomeMsg" >welcome <div class="panelUserName">Mr. Amr</div></div>
+										<div class="signout" ><a href="#" class="signout">Sign Out</a></div>
+										
+									</td>
+								</tr>
+							</tbody></table>
+							
+						</div>
+					</li>
+					
+					<li  data-icon="false" class="appoTab">
+						<a class="pannelText"  href="#appo-page" onclick=""  >
+							<img src="img/appo_icon.png" class="ui-li-icon nav-thumb" />
+							Appointments
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#news-page" onclick=""  >
+							<img src="img/news_icon.png" class="ui-li-icon nav-thumb" />
+							News
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText" href="#staff-page" onclick=""  data-iconpos="notext">
+							<img src="img/doctors_icon.png" class="ui-li-icon nav-thumb" />
+							My Doctors
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText" href="#" onclick="App.OpenMapPage();">
+							<img src="img/places_icon.png" class="ui-li-icon nav-thumb" />
+							Locations
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#settings-page" onclick="">
+							<img src="img/settings_icon.png" class="ui-li-icon nav-thumb" />
+							Settings
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#" onclick="">
+							<img src="img/careers_icon.png" class="ui-li-icon nav-thumb" />
+							Careers
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#" onclick=""  >
+							<img src="img/about_icon.png" class="ui-li-icon nav-thumb" />
+							About
+						</a>
+					</li>
+					
+				</ul>
+			</div><!-- /panel -->
+			
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a data-theme="menu-button" href="#left-panel" class="ui-btn-left" ></a>
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1 id="loginHeader"> Login </h1>
+				<a data-theme="next-button" href="#" id='' class="ui-btn-right" onclick="LoginController.login();"></a>
+			</div>
+			
+			
+			<div data-role="content" id="login-content" >
+				
+				<div class='loginLogoDiv' >
+					<img class="homePageLogo" src="img/logo.png" />
+				</div>
+					
+				<div  id="container">
+					
+					<label id='idTitle' for="userIDInput">ID Number</label>
+					<input id="userIDInput" type="text" id="name" value="" data-clear-btn="true" dir="ltr"/>
+					
+					<label id='mobileTitle' for="userMobileInput">Mobile Number</label>
+					<input id="userMobileInput" type="number" pattern="[0-9]*" name="name" id="name" value="" dir="ltr" />
+					
+					
+					 
+				</div> <!-- container  -->
+				
+				
+							
+			</div><!-- content -->
+		   
+		</div><!-- login-page -->
+		
+		
+		
+<!--************************** Register Screen *******************************--> 
+		<div data-role="page" id="reg-page" data-title="LogIn" class="custom-content" >
+			
+			
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a  data-rel="back" href="#" class="ui-btn-left"  ></a>
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1 id="regHeader">Register</h1>
+				<a data-theme="next-button" href="#" id='regBtn' class="ui-btn-right" onclick=""></a>
+			</div>
+			
+			
+			<div data-role="content" id="reg-content" >
+				
+				<div class='loginLogoDiv' >
+					<img class="homePageLogo" src="img/logo.png" />
+				</div>
+					
+				<div  id="container">
+					
+					<label for="selectIDType" id="selectIDTypeLB">Register</label>
+					<select name="selectIDType" id="selectIDType" data-icon='select-icon'>
+						<option value="0"></option>
+					</select>
+	
+					<label id='idLB' for="idVal">ID Number</label>
+					<input id="idVal" type="text" name="name" id="name" value=""  />
+					
+					<label id='userFirstNameLB' for="userFirstNameVal">First Name</label>
+					<input id="userFirstNameVal" type="text" name="name" id="name" value=""  />
+					
+					<label id='userLastNameLB' for="userLastNameVal">Last Name</label>
+					<input id="userLastNameVal" type="text" name="name" id="name" value=""  />
+					
+					<label id='userMobileLB' for="userMobileVal">Mobile Number</label>
+					<input id="userMobileVal" type="text" name="name" id="name" value=""  />
+					
+					
+					 
+				</div> <!-- container  -->
+				
+				
+							
+			</div><!-- content -->
+		   
+		</div><!-- login-page -->
+		
+		
+		
+<!--************************** Validation Screen *******************************--> 
+		<div data-role="page" id="validate-page" data-title="" class="custom-content" >
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a  data-rel="back" href="#" class="ui-btn-left"  ></a>
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1 id="validationHeader">Validation</h1>
+				<a data-theme="done-button" href="#" class="ui-btn-right" id='validateBtn' onclick=""></a>
+			</div>
+			
+			
+			<div data-role="content" id="reg-content" >
+				
+				<div class="validationHint">Validation code has been sent to your by SMS, Please enter the code below to login</div>
+				
+				<div style="position: relative">
+					
+					<input id="userMobileInput" class="validate-input" type="number" pattern="[0-9]*" id="name" value="" dir="ltr" />
+					<img src="img/appo_icon.png" class="validation-img"/>
+				</div>
+				
+			</div><!-- content -->
+		   
+		</div><!-- login-page -->
+<!--************************** News Screen *******************************--> 
+		<div data-role="page" id="news-page" data-title="LogIn" class="custom-content">
+			
+			
+			
+<div data-role="panel" id="left-panel" data-position="left" data-display="reveal">
+				<ul data-role="listview" >
+					<li data-icon="false" >
+						<div class="anonymousUserPanel" style="width: 100%; height: 100%;" >
+							<table  border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+								<tr style="height: 50%;">
+									<td colspan=2 class="pannelUserTab">
+										<input data-theme="pannel-button" id="" style="border:none;" type="button" data-mini="true" onclick='$.mobile.changePage("#login-page");' data-icon='anonymous-icon'  value='You are not logged in' ></input>
+									</td>
+								</tr>
+								<tr>
+									<td width ="50%" class="pannelVerifyTab">
+										<input data-theme="pannel-button" id="verifyBtn" type="button" data-mini="true" onclick='$.mobile.changePage("#login-page");' data-icon='register-icon' value='Login' ></input>
+									</td>
+									<td width ="50%" class="pannelRegTab">
+										<input data-theme="pannel-button" id="" type="button" data-mini="true" onclick='$.mobile.changePage("#reg-page");' data-icon='false' value='Register' ></input>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						
+						<div class="userloggingPanel" style="width: 100%; height: 100%;">
+							<table dir="ltr" border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+								<tr style="height: 50%;">
+									<td colspan=2 class="pannelUserTab">
+										<input data-theme="pannel-button" id="pannelUserBtn" style="border:none;" type="button" data-mini="true" onclick='' data-icon='loggedin-icon'  value='notLogged' ></input>
+									</td>
+								</tr>
+								<tr>
+									<td width ="50%" class="pannelVerifyTab">
+										<input data-theme="pannel-button" id="verifyBtn" type="button" data-mini="true" onclick='$.mobile.changePage("#validate-page");' data-icon='verify-icon' value='verify' ></input>
+									</td>
+									<td width ="50%" class="pannelRegTab">
+										<input data-theme="pannel-button" id="" type="button" data-mini="true" onclick='$.mobile.changePage("#reg-page");' data-icon='register-icon' value='Change User' ></input>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						
+						<div class="LoggedUserPanel" style="width: 100%; height: 100%;">
+							<table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+								<tr >
+									<td width="30%" style="padding: 5px;">
+										<img class="loggedUserIcon" src="img/loggedin_icon.png" />
+									</td>
+									<td >
+										<div class="welcomeMsg" >welcome <div class="panelUserName">Mr. Amr</div></div>
+										<div class="signout" ><a href="#" class="signout">Sign Out</a></div>
+										
+									</td>
+								</tr>
+							</tbody></table>
+							
+						</div>
+					</li>
+					
+					<li  data-icon="false" class="appoTab">
+						<a class="pannelText"  href="#appo-page" onclick=""  >
+							<img src="img/appo_icon.png" class="ui-li-icon nav-thumb" />
+							Appointments
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#news-page" onclick=""  >
+							<img src="img/news_icon.png" class="ui-li-icon nav-thumb" />
+							News
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText" href="#staff-page" onclick=""  data-iconpos="notext">
+							<img src="img/doctors_icon.png" class="ui-li-icon nav-thumb" />
+							My Doctors
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText" href="#" onclick="App.OpenMapPage();">
+							<img src="img/places_icon.png" class="ui-li-icon nav-thumb" />
+							Locations
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#settings-page" onclick="">
+							<img src="img/settings_icon.png" class="ui-li-icon nav-thumb" />
+							Settings
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#" onclick="">
+							<img src="img/careers_icon.png" class="ui-li-icon nav-thumb" />
+							Careers
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#" onclick=""  >
+							<img src="img/about_icon.png" class="ui-li-icon nav-thumb" />
+							About
+						</a>
+					</li>
+					
+				</ul>
+			</div><!-- /panel -->
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a data-theme="menu-button" href="#left-panel"  ></a>
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1 id="newsHeader">News</h1>
+			</div>
+			
+			
+			<div data-role="content" id="news-content" >
+				<ul data-role="listview"  data-theme="newsList" id="newsList">
+				</ul>
+							
+			</div><!-- content -->
+		   
+		</div><!-- news-page -->
+		
+<!--************************** News Details Screen *******************************--> 
+		<div data-role="page" id="newsDetails-page" data-title="LogIn" class="custom-content">
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a href="#" data-rel="back" class="ui-btn-left"></a> 
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1 >News Details</h1>
+			</div>
+			
+			
+			<div data-role="content" id="newsDetails-content"  >
+				<div class="news-details-header" id="newsDetailsHeaderDiv">
+					<div class="news-details-header-title-div">
+						<div class="news-details-header-title" id="newsDetailsTitle"></div>
+						<div class="news-details-header-date-div">
+							<div class="news-details-header-date" id="newsDetailsDate"></div>
+						</div>
+					</div>
+				</div>
+				<div id="newsDetailsDisc" class="news-details-desc"></div>
+							
+			</div><!-- content -->
+		   
+		</div><!-- newsDetails-page -->
+
+
+
+<!--************************** Home Screen *******************************--> 
+		<div data-role="page" id="appo-page" class="custom-content">
+			
+			
+<div data-role="panel" id="left-panel" data-position="left" data-display="reveal">
+				<ul data-role="listview" >
+					<li data-icon="false" >
+						<div class="anonymousUserPanel" style="width: 100%; height: 100%;" >
+							<table  border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+								<tr style="height: 50%;">
+									<td colspan=2 class="pannelUserTab">
+										<input data-theme="pannel-button" id="" style="border:none;" type="button" data-mini="true" onclick='$.mobile.changePage("#login-page");' data-icon='anonymous-icon'  value='You are not logged in' ></input>
+									</td>
+								</tr>
+								<tr>
+									<td width ="50%" class="pannelVerifyTab">
+										<input data-theme="pannel-button" id="verifyBtn" type="button" data-mini="true" onclick='$.mobile.changePage("#login-page");' data-icon='register-icon' value='Login' ></input>
+									</td>
+									<td width ="50%" class="pannelRegTab">
+										<input data-theme="pannel-button" id="" type="button" data-mini="true" onclick='$.mobile.changePage("#reg-page");' data-icon='false' value='Register' ></input>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						
+						<div class="userloggingPanel" style="width: 100%; height: 100%;">
+							<table dir="ltr" border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+								<tr style="height: 50%;">
+									<td colspan=2 class="pannelUserTab">
+										<input data-theme="pannel-button" id="pannelUserBtn" style="border:none;" type="button" data-mini="true" onclick='' data-icon='loggedin-icon'  value='notLogged' ></input>
+									</td>
+								</tr>
+								<tr>
+									<td width ="50%" class="pannelVerifyTab">
+										<input data-theme="pannel-button" id="verifyBtn" type="button" data-mini="true" onclick='$.mobile.changePage("#validate-page");' data-icon='verify-icon' value='verify' ></input>
+									</td>
+									<td width ="50%" class="pannelRegTab">
+										<input data-theme="pannel-button" id="" type="button" data-mini="true" onclick='$.mobile.changePage("#reg-page");' data-icon='register-icon' value='Change User' ></input>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						
+						<div class="LoggedUserPanel" style="width: 100%; height: 100%;">
+							<table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+								<tr >
+									<td width="30%" style="padding: 5px;">
+										<img class="loggedUserIcon" src="img/loggedin_icon.png" />
+									</td>
+									<td >
+										<div class="welcomeMsg" >welcome <div class="panelUserName">Mr. Amr</div></div>
+										<div class="signout" ><a href="#" class="signout">Sign Out</a></div>
+										
+									</td>
+								</tr>
+							</tbody></table>
+							
+						</div>
+					</li>
+					
+					<li  data-icon="false" class="appoTab">
+						<a class="pannelText"  href="#appo-page" onclick=""  >
+							<img src="img/appo_icon.png" class="ui-li-icon nav-thumb" />
+							Appointments
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#news-page" onclick=""  >
+							<img src="img/news_icon.png" class="ui-li-icon nav-thumb" />
+							News
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText" href="#staff-page" onclick=""  data-iconpos="notext">
+							<img src="img/doctors_icon.png" class="ui-li-icon nav-thumb" />
+							My Doctors
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText" href="#" onclick="App.OpenMapPage();">
+							<img src="img/places_icon.png" class="ui-li-icon nav-thumb" />
+							Locations
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#settings-page" onclick="">
+							<img src="img/settings_icon.png" class="ui-li-icon nav-thumb" />
+							Settings
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#" onclick="">
+							<img src="img/careers_icon.png" class="ui-li-icon nav-thumb" />
+							Careers
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#" onclick=""  >
+							<img src="img/about_icon.png" class="ui-li-icon nav-thumb" />
+							About
+						</a>
+					</li>
+					
+				</ul>
+			</div><!-- /panel -->
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a data-theme="menu-button" href="#left-panel" class="ui-btn-left"  ></a>
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1>My Appointments</h1>
+				<a data-theme="new-appo-button" href="#newAppo-page" class="ui-btn-right"></a>
+			</div>
+			
+			<div data-role="content" id="appo-content" >
+				<div id="emptyAppoList" onclick="alert('lksjd')">
+					<div class="noAppoHint">You don't have any scheduled Appointments</div>
+					<img class="addAppoHintImg"  src="img/loggedin_icon.png">
+					<div class="addAppoHint">Make an appointment</div>
+				</div>
+				<ul data-role="listview"  data-theme="appoList" id="appoList">
+				</ul>
+			</div>
+			
+		</div><!-- Home-page -->
+		
+		
+		
+		<!--************************** Appointment Details Screen *******************************--> 
+		<div data-role="page" id="appoDetails-page" class="custom-content">
+			
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a href="#" data-rel="back" class="ui-btn-left"></a> 
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1 id="appoDetailsHeader"></h1>
+			</div>
+			
+			<div data-role="content" id="appoDetails-content" >
+				<ul data-role="listview"  data-theme="appoList">
+					<li data-icon="delete" style="">
+						<div style="border:1px solid #528EBF;background-color:white;">
+							<table dir="ltr" cellspacing="3px" style="width: 100%;" ><tbody>
+								<tr >
+									<td style="" colspan="3">
+									<img class="app-bill-img"  src="img/bill.png">
+										<div>
+											<div class="appoTitle" id="appoDetailsTitle"></div>
+											<div class="appoDrName" id="appoDetailsDr"></div>
+										</div>
+										<hr class='splitter loginFormSplitter'>
+									</td>
+								</tr>
+								<tr>
+									<td style="">
+										<img class="app-cal-img"  src="img/cal.png">
+										<div class="appoDetails" id="appoDetailsDate"></div>
+									</td>
+									<td style="">
+										<img class="app-cal-img"  src="img/clock.png">
+										<div class="appoDetails" id="appoDetailsTime"></div>
+									</td>
+									<td style="">
+										<img class="app-cal-img"  src="img/pin.png">
+										<div class="appoDetails" id="appoDetailsProject"></div>
+									</td>
+								</tr>
+							</tbody></table>
+							<div style="text-align:center;" id="appoDetailsMapDiv">
+								
+							</div>
+						</div>
+						
+					</li>
+					
+				</ul>
+			</div>
+			
+			<div data-role="footer" data-theme="d" data-position="fixed" data-tap-toggle="false" class="custom-tabbar-1" dir="ltr">
+					<div style="margin:10px;">
+						<table width="100%"><tbody><tr>
+							<td width="50%" style="margin:10px;"><input data-theme="custom-button-1" id="registerBtn" type="button" data-mini="true" onclick=''  value="Cancel" ></input></td>
+							<td  width="50%" style="margin:10px;"><input data-theme="custom-button-3" id="registerBtn" type="button" data-mini="true" onclick=''  value="Reschedule" ></input></td>
+						</tr></tbody></table>
+						
+					</div>
+				</div>
+			
+		</div><!-- appoDetails-page -->
+		
+		<!--************************** New Appointment Screen *******************************--> 
+		<div data-role="page" id="newAppo-page" class="custom-content">
+			
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a href="#" data-rel="back" class="ui-btn-left"></a> 
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1>New Appointment</h1>
+			</div>
+			
+			<div data-role="content" id="newAppo-content" >
+				
+				<ul data-role="listview" data-theme="newAppoList">
+					<li data-icon="false">
+						<a href="#"  class="new-appo-cell">
+							<img src="img/clinic_icon.png" class="newAppoIcon">
+							<div>
+								<div class="newAppoTitle">Choose Clinic</div>
+								<img src="img/disclosure_icon.png" class="newAppoDisclosure">
+								<hr class='splitter newAppoSplitter'>
+								<div class="newAppoDesc" id="newAppoChosenExam"></div>
+							</div>
+						</a>
+					</li>
+					<li data-icon="false">
+						<a href="#"  class="new-appo-cell">
+							<img src="img/hospital_icon.png" class="newAppoIcon">
+							<div>
+								<div class="newAppoTitle">Choose Hospital</div>
+								<img src="img/disclosure_icon.png" class="newAppoDisclosure">
+								<hr class='splitter newAppoSplitter'>
+								<div class="newAppoDesc" id="newAppoChosenHos">Chosen Hospital</div>
+							</div>
+						</a>
+					</li>
+					
+				</ul>
+			</div>
+			
+			<div data-role="footer" data-theme="d" data-position="fixed" data-tap-toggle="false" class="custom-tabbar-1" dir="ltr">
+					<div style="margin:10px;">
+						<input data-theme="custom-button-1" id="" type="button" data-mini="true" onclick='AppoController.searchAppointments();'  value="Search" ></input>
+					</div>
+				</div>
+			
+		</div><!-- newAppo-page -->
+		
+		<!--************************** Appointment Search Result Screen *******************************--> 
+		<div data-role="page" id="appoSearchResult-page" >
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a href="#" data-rel="back" class="ui-btn-left"></a> 
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1>Appointments</h1>
+			</div>
+			
+			<div data-role="content" id="appoSearchResult-content" >
+				
+				<div data-role="collapsible" data-iconpos="right"  data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-collapsed="false" data-theme="appo-result-list" data-content-theme="appo-result">
+					<h4><img class="search-result-header-icon" src="img/hmg-small-icon.png" />Hospital Name</h4>
+					<ul data-role="listview" data-theme="drsSearchList">
+						<li style="" data-icon="disclosure-icon" >
+							<a href="#" onclick="AppoController.availableDrAppointments();" class="drSearch-cell">
+								<img src="img/dr.png">
+								<div>
+									<div class="drs-name">Dr.Name is here</div>
+									<div class="drs-details">Department</div>
+								</div>
+							</a>
+						</li>
+						<li style="" data-icon="disclosure-icon" >
+							<a href="#" onclick="AppoController.availableDrAppointments();" class="drSearch-cell">
+								<img src="img/dr.png">
+								<div>
+									<div class="drs-name">Dr.Name is here</div>
+									<div class="drs-details">Department</div>
+								</div>
+							</a>
+						</li>
+						<li style="" data-icon="disclosure-icon" >
+							<a href="#" onclick="AppoController.availableDrAppointments();" class="drSearch-cell">
+								<img src="img/dr.png">
+								<div>
+									<div class="drs-name">Dr.Name is here</div>
+									<div class="drs-details">Department</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div data-role="collapsible" data-iconpos="right"  data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-theme="appo-result-list" data-content-theme="appo-result">
+					<h4><img class="search-result-header-icon" src="img/hmg-small-icon.png" />Hospital Name</h4>
+					<ul data-role="listview" data-theme="drsSearchList">
+						<li style="" data-icon="disclosure-icon" >
+							<a href="#" onclick="StaffController.openDrProfile(1);" class="drSearch-cell">
+								<img src="img/dr.png">
+								<div>
+									<div class="drs-name">Dr.Name is here</div>
+									<div class="drs-details">Department</div>
+								</div>
+							</a>
+						</li>
+						<li style="" data-icon="disclosure-icon" >
+							<a href="#" onclick="StaffController.openDrProfile(1);" class="drSearch-cell">
+								<img src="img/dr.png">
+								<div>
+									<div class="drs-name">Dr.Name is here</div>
+									<div class="drs-details">Department</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div data-role="collapsible" data-iconpos="right"  data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-theme="appo-result-list" data-content-theme="appo-result">
+					<h4><img class="search-result-header-icon" src="img/hmg-small-icon.png" />Hospital Name</h4>
+					<ul data-role="listview" data-theme="drsSearchList">
+						<li style="" data-icon="disclosure-icon" >
+							<a href="#" onclick="StaffController.openDrProfile(1);" class="drSearch-cell">
+								<img src="img/dr.png">
+								<div>
+									<div class="drs-name">Dr.Name is here</div>
+									<div class="drs-details">Department</div>
+								</div>
+							</a>
+						</li>
+						<li style="" data-icon="disclosure-icon" >
+							<a href="#" onclick="StaffController.openDrProfile(1);" class="drSearch-cell">
+								<img src="img/dr.png">
+								<div>
+									<div class="drs-name">Dr.Name is here</div>
+									<div class="drs-details">Department</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+		</div><!-- appoSearchResult-page -->
+		
+		
+		<!--************************** A valiable Dr Appointment Screen *******************************--> 
+		<div data-role="page" id="drAppo-page" >
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a href="#" data-rel="back" class="ui-btn-left"></a> 
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1>Appointments</h1>
+			</div>
+			
+			<div data-role="content" id="drAppo-content" >
+				<ul data-role="listview" data-theme="drsAppoList" >
+					<li style="" data-icon="false"  >
+						<img src="img/dr.png">
+						<div>
+							<div class="drs-name">Dr.Name is here</div>
+							<div class="drs-details">Department</div>
+						</div>
+					</li>
+					<li class="drAppo-Hospital" data-icon="disclosure-icon"  >
+						<a href="#" onclick="">
+							<img class="ui-li-icon" src="img/pin.png">
+							<div>
+								<div id="drAppoHospitalName">Hospital Name</div>
+							</div>
+						</a>
+					</li>
+					
+					<li style="" data-icon="false" class="drAppo-header" >
+						<div>All Appointments</div>
+					</li>
+					
+					<li style="" data-icon="false"  >
+						<table class="drAppo-days"><tbody>
+							<tr>
+								<td><div class="drAppo-day" id="drAppoDay_1">15/6<div></td>
+								<td><div class="drAppo-day" id="drAppoDay_2">15/6<div></td>
+								<td><div class="drAppo-day" id="drAppoDay_3">15/6<div></td>
+								<td><div class="drAppo-day" id="drAppoDay_4">15/6<div></td>
+								<td><div class="drAppo-day" id="drAppoDay_5">15/6<div></td>
+							</tr>
+							<tr>
+								<td><div class="drAppo-day" id="drAppoDay_6">15/6<div></td>
+								<td><div class="drAppo-day" id="drAppoDay_7">15/6<div></td>
+								<td><div class="drAppo-day" id="drAppoDay_8">15/6<div></td>
+								<td><div class="drAppo-day" id="drAppoDay_9">15/6<div></td>
+								<td><div class="drAppo-day" id="drAppoDay_10">15/6<div></td>
+							</tr>
+							<tr>
+								<td><div class="drAppo-day" id="drAppoDay_11"><div></td>
+								<td><div class="drAppo-day" id="drAppoDay_12"><div></td>
+								<td><div class="drAppo-day" id="drAppoDay_13"><div></td>
+								<td><div class="drAppo-day" id="drAppoDay_14"><div></td>
+								<td><div class="drAppo-day" id="drAppoDay_15"><div></td>
+							</tr>
+						</tbody></table>
+					</li>
+				</ul>
+				
+			</div>
+		</div><!-- drAppo-page -->
+        
+
+<!--************************** Staff Screen *******************************--> 
+		<div data-role="page" id="staff-page" class="custom-content">
+			
+			
+			
+<div data-role="panel" id="left-panel" data-position="left" data-display="reveal">
+				<ul data-role="listview" >
+					<li data-icon="false" >
+						<div class="anonymousUserPanel" style="width: 100%; height: 100%;" >
+							<table  border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+								<tr style="height: 50%;">
+									<td colspan=2 class="pannelUserTab">
+										<input data-theme="pannel-button" id="" style="border:none;" type="button" data-mini="true" onclick='$.mobile.changePage("#login-page");' data-icon='anonymous-icon'  value='You are not logged in' ></input>
+									</td>
+								</tr>
+								<tr>
+									<td width ="50%" class="pannelVerifyTab">
+										<input data-theme="pannel-button" id="verifyBtn" type="button" data-mini="true" onclick='$.mobile.changePage("#login-page");' data-icon='register-icon' value='Login' ></input>
+									</td>
+									<td width ="50%" class="pannelRegTab">
+										<input data-theme="pannel-button" id="" type="button" data-mini="true" onclick='$.mobile.changePage("#reg-page");' data-icon='false' value='Register' ></input>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						
+						<div class="userloggingPanel" style="width: 100%; height: 100%;">
+							<table dir="ltr" border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+								<tr style="height: 50%;">
+									<td colspan=2 class="pannelUserTab">
+										<input data-theme="pannel-button" id="pannelUserBtn" style="border:none;" type="button" data-mini="true" onclick='' data-icon='loggedin-icon'  value='notLogged' ></input>
+									</td>
+								</tr>
+								<tr>
+									<td width ="50%" class="pannelVerifyTab">
+										<input data-theme="pannel-button" id="verifyBtn" type="button" data-mini="true" onclick='$.mobile.changePage("#validate-page");' data-icon='verify-icon' value='verify' ></input>
+									</td>
+									<td width ="50%" class="pannelRegTab">
+										<input data-theme="pannel-button" id="" type="button" data-mini="true" onclick='$.mobile.changePage("#reg-page");' data-icon='register-icon' value='Change User' ></input>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						
+						<div class="LoggedUserPanel" style="width: 100%; height: 100%;">
+							<table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+								<tr >
+									<td width="30%" style="padding: 5px;">
+										<img class="loggedUserIcon" src="img/loggedin_icon.png" />
+									</td>
+									<td >
+										<div class="welcomeMsg" >welcome <div class="panelUserName">Mr. Amr</div></div>
+										<div class="signout" ><a href="#" class="signout">Sign Out</a></div>
+										
+									</td>
+								</tr>
+							</tbody></table>
+							
+						</div>
+					</li>
+					
+					<li  data-icon="false" class="appoTab">
+						<a class="pannelText"  href="#appo-page" onclick=""  >
+							<img src="img/appo_icon.png" class="ui-li-icon nav-thumb" />
+							Appointments
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#news-page" onclick=""  >
+							<img src="img/news_icon.png" class="ui-li-icon nav-thumb" />
+							News
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText" href="#staff-page" onclick=""  data-iconpos="notext">
+							<img src="img/doctors_icon.png" class="ui-li-icon nav-thumb" />
+							My Doctors
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText" href="#" onclick="App.OpenMapPage();">
+							<img src="img/places_icon.png" class="ui-li-icon nav-thumb" />
+							Locations
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#settings-page" onclick="">
+							<img src="img/settings_icon.png" class="ui-li-icon nav-thumb" />
+							Settings
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#" onclick="">
+							<img src="img/careers_icon.png" class="ui-li-icon nav-thumb" />
+							Careers
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#" onclick=""  >
+							<img src="img/about_icon.png" class="ui-li-icon nav-thumb" />
+							About
+						</a>
+					</li>
+					
+				</ul>
+			</div><!-- /panel -->
+			
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a data-theme="menu-button" href="#left-panel" class="ui-btn-left" ></a>
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1> My Doctors </h1>
+				<a data-theme="search-button" href="#" id='' class="ui-btn-right" onclick=""></a>
+			</div>
+			
+			<div data-role="content" id="staff-content" >
+				<ul data-role="listview"  data-theme="drsList" id="staffList">
+					
+				</ul>
+			</div>
+			
+		</div><!-- Staff-page -->
+		
+		
+		<!--************************** drProfile Screen *******************************--> 
+		<div data-role="page" id="drProfile-page" data-title="LogIn" class="custom-content">
+			
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a href="#" data-rel="back" class="ui-btn-left"></a> 
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1 id="drProfileHeader"></h1>
+			</div>
+			
+			<div data-role="content" id="drProfile-content" >
+			
+				<div class="dr-profile-div">
+					<table  style=""><tbody>
+						<tr style="border-bottom:2px solid red;">
+							<td width="30%"><div class="dr-profile-img"></div></td>
+							<td>
+								<div id="drProfileName" class="drProfName"></div>
+								<div id="drProfileDept" class="drProfDetails"></div>
+								<div id="drProfileDesc" class="drProfDetails"></div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<div id="drProfileProf" class="drProfDetails"></div>
+							</td>
+						</tr>
+					</tbody></table>
+				</div>
+				
+			</div>
+			
+			<div data-role="footer" data-theme="d" data-position="fixed" data-tap-toggle="false" class="custom-tabbar-1" dir="ltr">
+					<div style="margin:10px;">
+						<input data-theme="custom-button-3" id="registerBtn" type="button" data-mini="true" onclick=''  value="Make an appointment" ></input>
+					</div>
+				</div>
+			
+		</div><!-- drProfile-page -->
+		
+		
+
+<!-- *************************** Map Page******************************************* -->
+	<div data-role="page" data-theme="c"  id="page-map">
+		
+		<div data-role="popup"  dir="ltr" id="popupPanel" data-corners="false" data-theme="none" data-shadow="false" data-tolerance="0,0">
+
+		    <div id="filterDiv" style="padding:15px;">
+		    	<!-- <div style="padding:15px;">
+		    	
+			    	<select data-icon="false" data-native-menu="true" name="mapCityList" data-theme="custom-menu-1" id="mapCityList" data-mini="true">
+						<option data-placeholder="true" value="">Select City</option>
+					</select>
+					
+					<div id="mapFilterDiv"></div>
+				
+				</div> -->
+			
+			
+				
+		    	<!-- <table><tbody><tr>
+	    			<td width="80%" id="mapFilterDiv"></td>
+	    			<td width="20%">
+	    				<a id="mapPosBtn" href="#" data-role=button data-mini="true" onclick="MapController.posBtnClicked();"><img src="images/193-location-arrow.png" ></a>
+	    			</td>
+	    		</tr></tbody></table> -->
+		    </div>
+			 
+		</div>
+		
+		<div class="custom-navbar-1" data-role="header" data-position="fixed"  data-tap-toggle="false"> 
+	       <a href="#" data-rel="back" data-icon='false'  data-theme="app-ios" class="noTabBar">Back</a> 
+	        <h1 id="mapPageHeader">Map</h1> 
+	       <!--  <a style="color:white;" data-theme="custom-button" id="mapHomeBtn"  onclick="MapController.homeBtnClicked();" class="ui-btn-right"></a> -->
+   		 </div>
+
+		<div data-role="content" id="map-content" style="padding:0;margin-bottom:5px;">
+			<div id="xmapCanvas"></div>
+			
+			
+		</div><!-- /content -->
+	
+	</div><!-- /page-map -->
+	
+	<!-- *************************** Map Page******************************************* -->
+	<div data-role="page"  id="map-page">
+		
+		<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a href="#" data-rel="back" class="ui-btn-left"></a> 
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1 id="appoDetailsHeader"></h1>
+			</div>
+			
+			
+		<div data-role="content" id="map-content" >
+			<div id="mapCanvas" style=""></div>
+			
+			
+		</div><!-- /content -->
+	
+	</div><!-- /page-map -->
+
+<!--************************** Settings Screen *******************************--> 
+		<div data-role="page" id="settings-page">
+			
+			
+			
+<div data-role="panel" id="left-panel" data-position="left" data-display="reveal">
+				<ul data-role="listview" >
+					<li data-icon="false" >
+						<div class="anonymousUserPanel" style="width: 100%; height: 100%;" >
+							<table  border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+								<tr style="height: 50%;">
+									<td colspan=2 class="pannelUserTab">
+										<input data-theme="pannel-button" id="" style="border:none;" type="button" data-mini="true" onclick='$.mobile.changePage("#login-page");' data-icon='anonymous-icon'  value='You are not logged in' ></input>
+									</td>
+								</tr>
+								<tr>
+									<td width ="50%" class="pannelVerifyTab">
+										<input data-theme="pannel-button" id="verifyBtn" type="button" data-mini="true" onclick='$.mobile.changePage("#login-page");' data-icon='register-icon' value='Login' ></input>
+									</td>
+									<td width ="50%" class="pannelRegTab">
+										<input data-theme="pannel-button" id="" type="button" data-mini="true" onclick='$.mobile.changePage("#reg-page");' data-icon='false' value='Register' ></input>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						
+						<div class="userloggingPanel" style="width: 100%; height: 100%;">
+							<table dir="ltr" border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+								<tr style="height: 50%;">
+									<td colspan=2 class="pannelUserTab">
+										<input data-theme="pannel-button" id="pannelUserBtn" style="border:none;" type="button" data-mini="true" onclick='' data-icon='loggedin-icon'  value='notLogged' ></input>
+									</td>
+								</tr>
+								<tr>
+									<td width ="50%" class="pannelVerifyTab">
+										<input data-theme="pannel-button" id="verifyBtn" type="button" data-mini="true" onclick='$.mobile.changePage("#validate-page");' data-icon='verify-icon' value='verify' ></input>
+									</td>
+									<td width ="50%" class="pannelRegTab">
+										<input data-theme="pannel-button" id="" type="button" data-mini="true" onclick='$.mobile.changePage("#reg-page");' data-icon='register-icon' value='Change User' ></input>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						
+						<div class="LoggedUserPanel" style="width: 100%; height: 100%;">
+							<table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+								<tr >
+									<td width="30%" style="padding: 5px;">
+										<img class="loggedUserIcon" src="img/loggedin_icon.png" />
+									</td>
+									<td >
+										<div class="welcomeMsg" >welcome <div class="panelUserName">Mr. Amr</div></div>
+										<div class="signout" ><a href="#" class="signout">Sign Out</a></div>
+										
+									</td>
+								</tr>
+							</tbody></table>
+							
+						</div>
+					</li>
+					
+					<li  data-icon="false" class="appoTab">
+						<a class="pannelText"  href="#appo-page" onclick=""  >
+							<img src="img/appo_icon.png" class="ui-li-icon nav-thumb" />
+							Appointments
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#news-page" onclick=""  >
+							<img src="img/news_icon.png" class="ui-li-icon nav-thumb" />
+							News
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText" href="#staff-page" onclick=""  data-iconpos="notext">
+							<img src="img/doctors_icon.png" class="ui-li-icon nav-thumb" />
+							My Doctors
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText" href="#" onclick="App.OpenMapPage();">
+							<img src="img/places_icon.png" class="ui-li-icon nav-thumb" />
+							Locations
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#settings-page" onclick="">
+							<img src="img/settings_icon.png" class="ui-li-icon nav-thumb" />
+							Settings
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#" onclick="">
+							<img src="img/careers_icon.png" class="ui-li-icon nav-thumb" />
+							Careers
+						</a>
+					</li>
+					
+					<li  data-icon="false">
+						<a class="pannelText"  href="#" onclick=""  >
+							<img src="img/about_icon.png" class="ui-li-icon nav-thumb" />
+							About
+						</a>
+					</li>
+					
+				</ul>
+			</div><!-- /panel -->
+			
+			
+			<div class="custom-navbar-1" data-role="header" data-position="fixed" data-tap-toggle="false">
+				<a data-theme="menu-button" href="#left-panel" class="ui-btn-left" ></a>
+				<img class="navbar_separator" src="img/navbar_separator.png" />
+				<h1> Settings </h1>
+			</div>
+			
+			<div data-role="content" id="settings-content" >
+				
+				<fieldset data-role="controlgroup" id="changeLang">
+					<legend>Language</legend>
+					<input type="radio" name="choice-lang" id="choice-lang-ar" value="ar">
+					<label for="choice-lang-ar">عربي</label>
+					<input type="radio" name="choice-lang" id="choice-lang-en" value="en">
+					<label for="choice-lang-en">English</label>
+				</fieldset>
+	
+			</div>
+			
+		</div><!-- Staff-page -->
+
+        
+        <script type="text/javascript" src="lib/cordova/cordova-ios-2.7.0.js"></script>
+        
+        <!-- JS -->
+
+
+	<script>
+		var isMobile = {
+		    Android : function() {
+		        return navigator.userAgent.match(/Android/i);
+		    },
+		    BlackBerry : function() {
+		        return navigator.userAgent.match(/BlackBerry/i);
+		    },
+		    BlackBerry10 : function() {
+		        return navigator.userAgent.match(/BB10/i);
+		    },
+		    iOS : function() {
+		        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+		    },
+		    Opera : function() {
+		        return navigator.userAgent.match(/Opera Mini/i);
+		    },
+		    Windows : function() {
+		        return navigator.userAgent.match(/IEMobile/i);
+		    },
+		    any : function() {
+		        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS()
+		                || isMobile.Opera() || isMobile.Windows());
+		    }
+		};
+		
+	    var fileref=document.createElement('script');
+	    fileref.setAttribute("type","text/javascript");
+		
+	    if (navigator.userAgent.toLowerCase().match('chrome'))
+	    {
+	        console.log("Browser", "chrome");
+	        
+	    }else{
+	
+	        if(isMobile.Android())  
+	    		fileref.setAttribute("src", "lib/cordova/cordova-2.7.0.js");
+	        else if(isMobile.iOS()) 
+	        	fileref.setAttribute("src", "lib/cordova/cordova-ios-2.7.0.js");
+	        else if(isMobile.Windows()) 
+	        	fileref.setAttribute("src", "lib/cordova/cordova-wp-2.7.0.js");				
+	        
+	        document.getElementsByTagName("head")[0].appendChild(fileref);
+	        console.log("Browser", navigator.userAgent.toLowerCase());
+	    }
+    </script>  
+          
+	<script type="text/javascript" src="lib/jqm/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="lib/jqm/jquery.json-2.3.js"></script>
+	<script type="text/javascript"  src="lib/plugins/PushNotification.js"></script>
+	<!--
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=en"></script>
+	<script type="text/javascript" src="lib/jqm/jquery.ui.map.js"></script>
+	<script type="text/javascript" src="lib/jqm/jquery.ui.map.services.js"></script>
+	-->
+	      
+	<script type="text/javascript" src="js/Loc.js"></script>
+	<script type="text/javascript" src="js/LoginController.js"></script>
+	<script type="text/javascript" src="js/RegController.js"></script>
+	<script type="text/javascript" src="js/AppoController.js"></script>
+	<script type="text/javascript" src="js/NewsController.js"></script>
+	<script type="text/javascript" src="js/StaffController.js"></script>
+	<script type="text/javascript" src="js/mController.js"></script>
+	<script type="text/javascript" src="js/SettingsController.js"></script>
+	
+	<script type="text/javascript" src="js/App.js"></script>
+              
+<!--  -->
+		
+
+        <!-- JS -->
+	<script type="text/javascript" >
+		App.LANG = "en";
+	</script>
+	
+	<link rel="stylesheet" type="text/css" href="lib/jqm/jquery.mobile-1.3.1.min.css" />
+	<script type="text/javascript" src="lib/jqm/jquery.mobile-1.3.1.min.js"></script>
+     
+ <!--  -->
+		
+        
+    </body>
+</html>

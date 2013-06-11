@@ -174,7 +174,6 @@ App.OpenMapPage	=	function (){
 $(document).bind("mobileinit",function(){
 	console.log("mobileinit");
 	
-<<<<<<< HEAD
 	
 	(function($){
 		/*
@@ -193,11 +192,6 @@ $(document).bind("mobileinit",function(){
 	})(jQuery);
 
 
-||||||| merged common ancestors
- 
-=======
- //init
->>>>>>> 254d5aee8902de3abc7c99e40cbb9f607c47a389
 	if(App.LANG == "en"){
 		Loc = enLoc;
 		Loc.Dir = "ltr";

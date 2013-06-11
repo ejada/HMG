@@ -1,6 +1,18 @@
 
 /***************** pannel-button **********************************/
 
+.ui-li-has-icon .ui-btn-inner a.pannelText.ui-link-inherit{
+	padding-left : 15px;
+	padding-right : 50px;
+}
+
+
+.ui-li-icon.nav-thumb.ui-li-thumb{
+	
+	left: auto;
+	right: 5px;
+}
+
 
 .pannelVerifyTab{
 	border-right : 0;

@@ -15,7 +15,7 @@
 	"sPanel":{
 		"notLogged"		:["notLogged","عميل غير مسجل"],
 		"verify"		:["verify","تأكيد"],
-		"changeUser"	:["Change User","مستخدم اخر"],
+		"changeUser"	:["Switch User","مستخدم اخر"],
 		"anonymousUser"	:["You are not logged in","لم يتم تسجيل الدخول"],
 		"login"			:["Login","دخول"],
 		"register"		:["Register","تسجيل"],

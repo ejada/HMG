@@ -7,7 +7,7 @@
 				<a data-theme="menu-button" href="#left-panel" class="ui-btn-left"  ></a>
 				<img class="navbar_separator" src="img/navbar_separator.png" />
 				<h1><pyloc src="appoPage.header"></h1>
-				<a data-theme="new-appo-button" href="#newAppo-page" class="ui-btn-right"></a>
+				<a data-theme="new-appo-button" href="#drAppo-page" class="ui-btn-right"></a>
 			</div>
 			
 			<div data-role="content" id="appo-content" >
@@ -257,36 +257,50 @@
 					</li>
 					
 					<li style="" data-icon="false" class="drAppo-header" >
-						<div>All Appointments</div>
+						<div>Date</div>
 					</li>
 					
-					<li style="" data-icon="false"  >
-						<table class="drAppo-days"><tbody>
-							<tr>
-								<td><div class="drAppo-day" id="drAppoDay_1">15/6<div></td>
-								<td><div class="drAppo-day" id="drAppoDay_2">15/6<div></td>
-								<td><div class="drAppo-day" id="drAppoDay_3">15/6<div></td>
-								<td><div class="drAppo-day" id="drAppoDay_4">15/6<div></td>
-								<td><div class="drAppo-day" id="drAppoDay_5">15/6<div></td>
-							</tr>
-							<tr>
-								<td><div class="drAppo-day" id="drAppoDay_6">15/6<div></td>
-								<td><div class="drAppo-day" id="drAppoDay_7">15/6<div></td>
-								<td><div class="drAppo-day" id="drAppoDay_8">15/6<div></td>
-								<td><div class="drAppo-day" id="drAppoDay_9">15/6<div></td>
-								<td><div class="drAppo-day" id="drAppoDay_10">15/6<div></td>
-							</tr>
-							<tr>
-								<td><div class="drAppo-day" id="drAppoDay_11"><div></td>
-								<td><div class="drAppo-day" id="drAppoDay_12"><div></td>
-								<td><div class="drAppo-day" id="drAppoDay_13"><div></td>
-								<td><div class="drAppo-day" id="drAppoDay_14"><div></td>
-								<td><div class="drAppo-day" id="drAppoDay_15"><div></td>
-							</tr>
-						</tbody></table>
+					<li style="" data-icon="false" class="drAppoDragable" >
+					
+						<div class="previous-arrow"></div>
+						<div id="daysPanelDiv" class="scrolableRow">
+							<div id="daysPanel" class="row panel_list">
+								
+							</div>
+						</div>
+						<div class="next-arrow"></div>
+						
 					</li>
+					
+					<li style="" data-icon="false" class="drAppo-header" >
+						
+						<div ><img class="search-result-header-icon" src="img/hmg-small-icon.png" />Time</div>
+						<div style="position:absolute; right:2px; float:right;"id="headerSelectedDate">18 May</div>
+					</li>
+					
+					<li class="drAppoDragable">
+						<div class="previous-arrow"></div>
+						<div id="timePanelDiv" class="scrolableRow">
+							<div id="timePanel" class="row panel_list">
+								
+							</div>
+						</div>
+						<div class="next-arrow"></div>
+					</li>
+					
+					<li style="" data-icon="false" class="drAppo-appo-details" >
+						<div>
+							<table><tbody><tr>
+								<td id="drAppoDateVal">TUS 25 May</td>
+								<td id="drAppoTimeVal">3:30 AM</td>
+							</tr></tbody></table>
+						</div>
+						<input data-theme="custom-button-1" type=button data-icon="check" value="Book Appointment"></input>
+					</li>
+					
 				</ul>
-				
+					
 			</div>
 		</div><!-- drAppo-page -->
         
+		

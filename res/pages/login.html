@@ -10,7 +10,7 @@
 				<a data-theme="menu-button" href="#left-panel" class="ui-btn-left" ></a>
 				<img class="navbar_separator" src="img/navbar_separator.png" />
 				<h1 id="loginHeader"> <pyloc src="loginPage.header"> </h1>
-				<a data-theme="next-button" href="#" id='' class="ui-btn-right" onclick="LoginController.login();"></a>
+				<a data-theme="next-button" href="#" id='loginBtn' class="ui-btn-right" onclick="LoginController.login();"></a>
 			</div>
 			
 			
@@ -97,7 +97,7 @@
 				<a  data-rel="back" href="#" class="ui-btn-left"  ></a>
 				<img class="navbar_separator" src="img/navbar_separator.png" />
 				<h1 id="validationHeader"><pyloc src="validatePage.header"></h1>
-				<a data-theme="done-button" href="#" class="ui-btn-right" id='validateBtn' onclick=""></a>
+				<a data-theme="done-button" href="#" class="ui-btn-right" id='validateBtn' onclick="ValidationController.validate();"></a>
 			</div>
 			
 			
@@ -107,7 +107,7 @@
 				
 				<div style="position: relative">
 					
-					<input id="userMobileInput" class="validate-input" type="number" pattern="[0-9]*" id="name" value="" dir="ltr" />
+					<input id="validationCodeInput" class="validate-input" type="number" pattern="[0-9]*" id="name" value="" dir="ltr" />
 					<img src="img/appo_icon.png" class="validation-img"/>
 				</div>
 				

@@ -2,57 +2,123 @@
 <div data-role="panel" id="left-panel" data-position="left" data-display="reveal">
 				<ul data-role="listview" >
 					<li data-icon="false" >
+						
 						<div class="anonymousUserPanel" style="width: 100%; height: 100%;" >
 							<table  border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
-								<tr style="height: 50%;">
-									<td colspan=2 class="pannelUserTab">
-										<input data-theme="pannel-button" id="" style="border:none;" type="button" data-mini="true" onclick='$.mobile.changePage("#login-page");' data-icon='anonymous-icon'  value='<pyloc src="sPanel.anonymousUser">' ></input>
+								<tr style="height: 40px;">
+									<td colspan=2 >
+										<div class="pannelUserTab" style="">
+											<table  border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+												<tr >
+													<td colspan=2 width="15%">
+														<img class="anonUserIcon" src="img/notloggedin_icon.png" />
+													</td>
+													<td colspan=2 style="color:white;text-shadow:none;">
+														<pyloc src="sPanel.anonymousUser">
+													</td>
+												</tr>
+											</tbody></table>
+										</div>
 									</td>
 								</tr>
-								<tr>
-									<td width ="50%" class="pannelVerifyTab">
-										<input data-theme="pannel-button" id="verifyBtn" type="button" data-mini="true" onclick='$.mobile.changePage("#login-page");' data-icon='register-icon' value='<pyloc src="sPanel.login">' ></input>
-									</td>
-									<td width ="50%" class="pannelRegTab">
-										<input data-theme="pannel-button" id="" type="button" data-mini="true" onclick='$.mobile.changePage("#reg-page");' data-icon='false' value='<pyloc src="sPanel.register">' ></input>
-									</td>
-								</tr>
-							</tbody></table>
-						</div>
-						
-						<div class="userloggingPanel" style="width: 100%; height: 100%;">
-							<table dir="ltr" border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
-								<tr style="height: 50%;">
-									<td colspan=2 class="pannelUserTab">
-										<input data-theme="pannel-button" id="pannelUserBtn" style="border:none;" type="button" data-mini="true" onclick='' data-icon='loggedin-icon'  value='<pyloc src="sPanel.notLogged">' ></input>
-									</td>
-								</tr>
-								<tr>
-									<td width ="50%" class="pannelVerifyTab">
-										<input data-theme="pannel-button" id="verifyBtn" type="button" data-mini="true" onclick='$.mobile.changePage("#validate-page");' data-icon='verify-icon' value='<pyloc src="sPanel.verify">' ></input>
-									</td>
-									<td width ="50%" class="pannelRegTab">
-										<input data-theme="pannel-button" id="" type="button" data-mini="true" onclick='$.mobile.changePage("#reg-page");' data-icon='register-icon' value='<pyloc src="sPanel.changeUser">' ></input>
-									</td>
-								</tr>
-							</tbody></table>
-						</div>
-						
-						<div class="LoggedUserPanel" style="width: 100%; height: 100%;">
-							<table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
-								<tr >
-									<td width="30%" style="padding: 5px;">
-										<img class="loggedUserIcon" src="img/loggedin_icon.png" />
-									</td>
-									<td >
-										<div class="welcomeMsg" ><pyloc src="sPanel.welcome"> <div class="panelUserName">Mr. Amr</div></div>
-										<div class="signout" ><a href="#" class="signout"><pyloc src="sPanel.signout"></a></div>
+								<tr style="height: 40px;">
+									<td colspan=2 class="">
+										<div class="panelButtonsTop" style=""></div>
 										
+										<div  class="panelButtonsTab" style="">
+											<table  border="0" cellpadding="0" cellspacing="3px" style="width: 100%; height: 100%;" ><tbody>
+												<tr>
+													<td width ="50%">
+														<div  style="width: 90%;margin-left:auto;margin-right:auto;"><input data-theme="custom-button-1" id="verifyBtn" type="button" data-mini="true" onclick='$.mobile.changePage("#login-page");' data-icon='register-icon' value='<pyloc src="sPanel.login">' ></input></div>
+													</td>
+													<td width ="50%" class="">
+														<div style="width: 95%;margin-left:auto;margin-right:auto;"><input data-theme="custom-button-1" id="" type="button" data-mini="true" onclick='$.mobile.changePage("#reg-page");' data-icon='false' value='<pyloc src="sPanel.register">' ></input></div>
+													</td>
+												</tr>
+											</tbody></table>
+										</div>
 									</td>
 								</tr>
 							</tbody></table>
-							
 						</div>
+						
+						<div class="userloggingPanel" style="width: 100%; height: 100%;" >
+							<table  border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+								<tr style="height: 40px;">
+									<td colspan=2 >
+										<div class="pannelUserTab" style="">
+											<table  border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+												<tr >
+													<td colspan=2 width="15%">
+														<img class="loggedUserIcon" src="img/loggedin_icon.png" />
+													</td>
+													<td colspan=2 style="color:white;text-shadow:none;">
+														Mr. Shady
+													</td>
+												</tr>
+											</tbody></table>
+										</div>
+									</td>
+								</tr>
+								<tr style="height: 40px;">
+									<td colspan=2 class="">
+										<div class="panelButtonsTop" style=""></div>
+										
+										<div  class="panelButtonsTab" style="">
+											<table  border="0" cellpadding="0" cellspacing="3px" style="width: 100%; height: 100%;" ><tbody>
+												<tr>
+													<td width ="50%">
+														
+														<input data-theme="custom-button-1" id="verifyBtn" type="button" data-mini="true" onclick='$.mobile.changePage("#validate-page");' data-icon='verify-icon' value='<pyloc src="sPanel.verify">' ></input>
+													</td>
+													<td width ="50%" class="">
+														<input data-theme="custom-button-1" id="" type="button" data-mini="true" onclick='$.mobile.changePage("#login-page");' data-icon='false' value='<pyloc src="sPanel.changeUser">' ></input>
+													</td>
+												</tr>
+											</tbody></table>
+										</div>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						
+						
+						<div class="LoggedUserPanel" style="width: 100%; height: 100%;" >
+							<table  border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+								<tr style="height: 40px;">
+									<td colspan=2 >
+										<div class="pannelUserTab" style="">
+											<table  border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%;" ><tbody>
+												<tr >
+													<td colspan=2 width="15%">
+														<img class="loggedUserIcon" src="img/loggedin_icon.png" />
+													</td>
+													<td colspan=2 style="color:white;text-shadow:none;">
+														Mr. Shady
+													</td>
+												</tr>
+											</tbody></table>
+										</div>
+									</td>
+								</tr>
+								<tr style="height: 40px;">
+									<td colspan=2 class="">
+										<div class="panelButtonsTop" style=""></div>
+										
+										<div  class="panelButtonsTab" style="">
+											<table  border="0" cellpadding="0" cellspacing="3px" style="width: 100%; height: 100%;" ><tbody>
+												<tr>
+													<td>
+														<div style="width:50%;margin-left:auto;margin-right:auto;"><input data-theme="custom-button-1" id="" type="button" data-mini="true" onclick='$.mobile.changePage("#login-page");' data-icon='false' value='<pyloc src="sPanel.signout">' ></input></div>
+													</td>
+												</tr>
+											</tbody></table>
+										</div>
+									</td>
+								</tr>
+							</tbody></table>
+						</div>
+						
 					</li>
 					
 					<li  data-icon="false" class="appoTab">

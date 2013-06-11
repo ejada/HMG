@@ -195,12 +195,58 @@ div[data-theme="pannel-button"] .ui-btn-inner{
 
 .ui-li-has-icon .ui-btn-inner a.pannelText.ui-link-inherit{
 	font-size: 20px; 
-	color:gray;
+	color:white;
 	text-shadow:none;
 	font-weight:normal;
 	padding-left : 50px;
 }
 
+
+.ui-li-icon.nav-thumb.ui-li-thumb{
+	max-height : 40px;
+	max-width	: 40px;
+	top: 7px;
+	left: 5px;
+}
+
+.ui-panel-inner .ui-listview > .ui-li.ui-first-child,
+.ui-panel-position-left{
+	background-color : #404545;
+	background-image : none;
+	height	: 90px;
+	padding : 0;
+}
+
+.ui-panel-inner .ui-listview > .ui-btn-hover-c,
+.ui-panel-inner .ui-listview > .ui-btn-down-c,
+.ui-panel-inner .ui-listview > .ui-btn-active-c{
+	-webkit-box-shadow	: none;
+	-moz-box-shadow		: none;
+	box-shadow			: none;
+	
+	background-image : none;
+	
+	background-color : #323636;
+}
+
+.ui-panel-inner .ui-listview > .ui-btn-up-c{
+	-webkit-box-shadow	: none;
+	-moz-box-shadow		: none;
+	box-shadow			: none;
+	
+	background-image : none;
+	
+	background-color : #404545;
+}
+
+.ui-panel-inner .ui-listview > .ui-btn>.ui-btn-inner.ui-li{
+	border-top : 2px solid #323636;
+}
+.ui-panel-inner .ui-listview >.ui-li.ui-last-child,
+.ui-panel-inner .ui-listview >.ui-li.ui-last-child>.ui-btn-inner.ui-li{
+	border-bottom: 0px;
+}
+/*
 .ui-panel-position-left{
 
 	-webkit-box-shadow	: inset -15px 0 5px -9px rgba(0,0,0,.15);
@@ -215,13 +261,6 @@ div[data-theme="pannel-button"] .ui-btn-inner{
 	background-image : -webkit-gradient(linear,left top,left bottom,from(#ffffff),to(#f0f0f0));
 }
 
-.ui-panel-inner .ui-listview > .ui-li.ui-first-child{
-	background-color : #404545;
-	background-image : none;
-	height	: 100px;
-	padding : 0;
-}
-
 .ui-panel-inner .ui-listview > .ui-btn-up-c{
 	-webkit-box-shadow	: inset -15px 0 5px -9px rgba(0,0,0,.15);
 	-moz-box-shadow		: inset -15px 0 5px -9px rgba(0,0,0,.15);
@@ -234,13 +273,47 @@ div[data-theme="pannel-button"] .ui-btn-inner{
 	background-image : -webkit-linear-gradient(#ffffff,#f0f0f0);
 	background-image : -webkit-gradient(linear,left top,left bottom,from(#ffffff),to(#f0f0f0));
 }
+*/
 
 .ui-panel-inner .ui-listview > .ui-li{
 	border-top-width : 0;
 }
 
 .pannelUserTab{
-	border-bottom : 2px solid #ED1B2C;
+	width:95%; 
+	height: 100%; 
+	background-color: #ED1B2C; 
+	margin-right:auto;
+	margin-left:auto;
+}
+
+.panelButtonsTop{
+	width:95%; 
+	height: 10px; 
+	background-color: #C41725; 
+	margin-right:auto;
+	margin-left:auto;
+	margin-left:auto; 
+	border-bottom-left-radius:.9em; 
+	border-bottom-right-radius:.9em;
+}
+
+.panelButtonsTab{
+	margin-top:-10px; 
+	width:90%; 
+	height: 100%; 
+	background-color: white; 
+	margin-right:auto;
+	margin-left:auto; 
+	border-bottom-left-radius:1em; 
+	border-bottom-right-radius:1em;
+	height : 50px;
+}
+
+.panelButtonsDiv{
+	width : 90%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .pannelVerifyTab{
@@ -313,16 +386,19 @@ div[data-theme="pannel-button"] .ui-btn-inner{
 	border: none;
 }
 
-.ui-li-icon.nav-thumb.ui-li-thumb{
-	max-height : 25px;
-	max-width	: 25px;
-}
 
 
 .pannelText.ui-link-inherit{}
 
 .loggedUserIcon {
-	
+	width: 25px;
+	height: 25px;
+	margin: 5px;
+}
+
+.anonUserIcon {
+	height: 25px;
+	margin: 3px 10px;
 }
 
 .welcomeMsg{
@@ -661,35 +737,149 @@ ul[data-theme="drsAppoList"].ui-listview{
 	padding: .3em 15px;
 }
 
-table[class="drAppo-days"] {
-  border-collapse: collapse;
-}
-table[class="drAppo-days"] td, table[class="drAppo-days"] th {
-  border: 2px solid gray;
-  vertical-align: middle;
-}
-table[class="drAppo-days"] tr:first-child td {
-  border-top: 0;
-}
-table[class="drAppo-days"] tr:last-child td {
-  border-bottom: 0;
-}
-table[class="drAppo-days"] tr td:first-child,
-table[class="drAppo-days"] tr th:first-child {
-  border-left: 0;
-}
-table[class="drAppo-days"] tr td:last-child,
-table[class="drAppo-days"] tr th:last-child {
-  border-right: 0;
+/************* scrolableRow Day ***********************/
+.appoWDay{
+	font-size: 12px;
 }
 
-.drAppo-day{
-	min-height: 15px;
-	text-align : center;
-	color : gray;
+.appoDay{
+	font-size: 18px;
+}
+
+.appoMonth{
+	font-size: 15px;
+}
+
+
+.spanDay.selected{
+	color: black;
+	border: 1px solid black;
+}
+
+.spanDay{
+	min-width : 35px;
+	border: 1px solid gray;
 	font-weight: bold;
-	text-shadow: none;
-	padding: 0.5em;
+	text-align: center;
+	padding:5px;
+	color: gray;
+}
+
+.scrolableRow .spanDay { 
+	margin-top: 0px;
+	min-height: 40px; 
+}
+/************* scrolableRow Time ***********************/
+
+
+.spanTime.selected{
+	color: black;
+	border: 1px solid black;
+}
+
+.spanTime{
+	min-width : 45px;
+	border: 1px solid gray;
+	font-weight: bold;
+	font-size: 15px;
+	text-align: center;
+	padding:5px;
+	color: gray;
+	border: none;
+}
+
+.scrolableRow .spanTime { 
+	margin-top: 1.2em;
+	min-height: 20px; 
+}
+
+/************* scrolableRow ***********************/
+.scrolableRow {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+	overflow-x: hidden;
+    white-space: nowrap;
+}
+
+[class*="span"]{
+	margin-left: 10px;
+}
+
+.scrolableRow [class*="span"] {
+    display: inline-block;
+    float: none; /* Very important */
+}
+.row{
+	min-height:70px;
+}
+
+.row:before, .row:after{
+	display : table;
+	content : "";
+}
+
+.row:after{
+	clear : both;
+}
+
+.drAppoDragable.ui-li.ui-li-static{
+	padding: 3px 15px;
+}
+
+.previous-arrow{
+	width : 10px;
+	height: 70px;
+	position: absolute;
+	top: 3px;
+	left: 5px;
+	right: auto;
+	background-image: url(../img/previous_arrow.png);
+	background-position: center;
+	background-size : 100% auto;
+	background-repeat: no-repeat;
+}
+
+
+.next-arrow{
+	width : 10px;
+	height: 70px;
+	position: absolute;
+	top: 3px;
+	right: 5px;
+	left: auto;
+	background-image: url(../img/next_arrow.png);
+	background-position: center;
+	background-size : 100% auto;
+	background-repeat: no-repeat;
+}
+
+.drAppo-appo-details{
+	border-top : 2px solid gray;
+	text-align : center;
+}
+
+
+.drAppo-appo-details>div{
+	max-width: 200px;
+	margin-left: auto;
+	margin-right : auto;
+}
+
+
+#drAppoDateVal{
+	text-align : left;
+	color: black;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+
+#drAppoTimeVal{
+	text-align : right;
+	color: black;
+	font-weight: bold;
+	font-size: 15px;
 }
 /*****************  MyDrs **********************************/
 
@@ -754,4 +944,3 @@ table[class="drAppo-days"] tr th:last-child {
 	left:0;
 	right:0;
 }
-
